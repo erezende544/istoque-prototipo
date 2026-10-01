@@ -7,6 +7,16 @@
     "figma"
   ],
   "documentAccess": "dynamic-page",
+  "menu": [
+    {
+      "name": "Gerar protótipo completo",
+      "command": "tudo"
+    },
+    {
+      "name": "Adicionar ou atualizar landing page e planos",
+      "command": "site"
+    }
+  ],
   "networkAccess": {
     "allowedDomains": [
       "none"

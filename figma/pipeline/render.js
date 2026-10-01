@@ -21,8 +21,15 @@ const IMG = {
   mascote: 'data:image/png;base64,' + fs.readFileSync(path.join(DIR, 'mascot_pal.png')).toString('base64'),
   textura: 'data:image/png;base64,' + fs.readFileSync(path.join(DIR, 'texture_2bit.png')).toString('base64'),
 };
-const FONTS = [['Inter', 400, 'font0.ttf'], ['Inter', 600, 'font1.ttf'], ['Poppins', 600, 'font2.ttf'], ['Poppins', 700, 'font3.ttf']]
+for (const k of ['site-hero', 'site-registros', 'site-alertas', 'site-desperdicio']) IMG[k] = 'data:image/jpeg;base64,' + fs.readFileSync(path.join(DIR, 'site', 'img', k + '.jpg')).toString('base64');
+const FONTS_APP = [['Inter', 400, 'font0.ttf'], ['Inter', 600, 'font1.ttf'], ['Poppins', 600, 'font2.ttf'], ['Poppins', 700, 'font3.ttf']]
   .map(([f, w, file]) => `@font-face{font-family:'${f}';font-weight:${w};src:url(data:font/ttf;base64,${fs.readFileSync(path.join(DIR, file)).toString('base64')})}`).join('\n');
+// A landing page e os planos vêm de PDFs do Figma, que usa avanços fracionários (sem hinting):
+// para eles, Inter e Poppins sem hinting do @fontsource (subconjunto latin, que cobre o português).
+const FS = [path.join(DIR, 'node_modules', '@fontsource'), path.join(DIR, 'fontsrc', 'node_modules', '@fontsource')].find((p) => fs.existsSync(p));
+const FONTS_SITE = FS ? [['Inter', 'inter'], ['Poppins', 'poppins']].flatMap(([f, dir]) => [400, 500, 600, 700].map((w) =>
+  `@font-face{font-family:'${f}';font-weight:${w};src:url(data:font/woff;base64,${fs.readFileSync(path.join(FS, dir, 'files', `${dir}-latin-${w}-normal.woff`)).toString('base64')})}`)).join('\n') : FONTS_APP;
+let FONTS = FONTS_APP, SITE_CSS = '';
 
 const col = (p) => { if (!p) return 'transparent'; const [h, a] = Array.isArray(p) ? p : [p, 1]; const n = parseInt(h.slice(1), 16); return `rgba(${n >> 16},${(n >> 8) & 255},${n & 255},${a})`; };
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -87,7 +94,8 @@ function el(n, parentL) {
       if (n.rot) s.push(`transform:rotate(${n.rot}deg)`);
       return `<svg style="${s.join(';')};overflow:visible" width="${n.w}" height="${n.h}" viewBox="0 0 200 140" preserveAspectRatio="xMidYMid meet">${ARTS[n.art] || ''}</svg>`;
     }
-    return `<div style="${s.join(';')}">${n.svg}</div>`;
+    // display:block evita que o SVG embutido fique apoiado na linha de base (deslocado para baixo)
+    return `<div style="${s.join(';')}">${n.svg.replace('<svg ', '<svg style="display:block" ')}</div>`;
   }
   if (n.t === 'I') {
     if (n.r !== undefined) s.push(`border-radius:${Array.isArray(n.r) ? n.r.map((v) => v + 'px').join(' ') : n.r + 'px'}`);
@@ -118,8 +126,9 @@ function el(n, parentL) {
 function page(root, overlay) {
   if (overlay) return `<!doctype html><html><head><meta charset="utf-8"><style>${FONTS}\nhtml,body{margin:0;padding:0}</style></head><body><div id="root" style="position:relative;width:${root.w}px;height:${root.h}px">${el({ ...root, x: 0, y: 0 }, null)}</div></body></html>`;
   const body = (root.c || []).map((c) => el(c, null)).join('');
-  return `<!doctype html><html><head><meta charset="utf-8"><style>${FONTS}\nhtml,body{margin:0;padding:0}*{-webkit-font-smoothing:antialiased}</style></head><body>` +
-    `<div id="root" style="position:relative;width:${root.w}px;height:${root.h}px;overflow:hidden;background:${col(root.f)}">${body}</div></body></html>`;
+  const rs = root.s && root.s.ws ? `;box-shadow:${[['0', root.s.ws[0]], ['0', -root.s.ws[2]]].filter(([, v]) => v).map(([x, y]) => `inset ${x} ${y}px 0 0 ${col(root.s.c)}`).join(',')}` : '';
+  return `<!doctype html><html><head><meta charset="utf-8"><style>${FONTS}\nhtml,body{margin:0;padding:0}*{-webkit-font-smoothing:antialiased}${SITE_CSS}</style></head><body>` +
+    `<div id="root" style="position:relative;width:${root.w}px;height:${root.h}px;overflow:hidden;background:${col(root.f)}${rs}">${body}</div></body></html>`;
 }
 function diff(aPath, bPath, outPath) {
   const A = PNG.sync.read(fs.readFileSync(aPath)), B = PNG.sync.read(fs.readFileSync(bPath));
@@ -150,12 +159,18 @@ function diff(aPath, bPath, outPath) {
       const id = f.replace('.json', ''), key = plat + '/' + id;
       if (only && !key.includes(only)) continue;
       const root = loadScreen(key);
+      const site = id === 'landing' || id === 'planos';
+      FONTS = site ? FONTS_SITE : FONTS_APP;
+      // avanços fracionários, como no Figma (o Chromium arredonda cada letra por padrão)
+      SITE_CSS = site ? '*{text-rendering:geometricPrecision}' : '';
       await pg.setViewportSize({ width: Math.round(root.w), height: Math.round(root.h) });
       await pg.setContent(page(root, id.startsWith('m-') || id === 'toast'), { waitUntil: 'load' });
       await pg.evaluate(() => document.fonts.ready);
       const shot = path.join(DIR, 'rshots', plat, id + '.png');
       await pg.locator('#root').screenshot({ path: shot });
-      const r = diff(shot, path.join(DIR, 'ref', plat, id + '.png'), path.join(DIR, 'rdiff', plat, id + '.png'));
+      const refPath = path.join(DIR, 'ref', plat, id + '.png');
+      if (!fs.existsSync(refPath)) { console.log(key.padEnd(34), 'sem referência (ref/' + plat + '/' + id + '.png)'); continue; }
+      const r = diff(shot, refPath, path.join(DIR, 'rdiff', plat, id + '.png'));
       rows.push([key, r.pct.toFixed(2) + '%', r.sizeA.join('x'), r.sizeB.join('x')]);
       console.log(key.padEnd(34), (r.pct.toFixed(2) + '%').padStart(7), 'render', r.sizeA.join('x'), 'ref', r.sizeB.join('x'));
     }

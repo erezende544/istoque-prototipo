@@ -152,27 +152,43 @@ async function ensureFoundation(ds) {
     } catch (e) { fail('ilustração ' + name, e); }
     j++;
   }
-  // imagens (mascote e textura)
+  // imagens (mascote, textura e ilustrações da landing page)
   const secM = section(ds, 'Imagens', 2900, 900, 1200, 640);
-  let k = 0;
+  let k = 0, cx = 40, cy = 80, rowH = 0;
+  let added = false;
   for (const [name, b64] of Object.entries(DATA.images)) {
     try {
       let img = reg.imgs[name] ? figma.getImageByHash(reg.imgs[name]) : null;
       if (!img) { img = figma.createImage(figma.base64Decode(b64)); reg.imgs[name] = img.hash; }
       if (!(await alive(reg.comps['img:' + name]))) {
         const sz = await img.getSizeAsync();
+        const meta = DATA.imageMeta[name] || [name, ''];
         const comp = figma.createComponent();
-        comp.name = 'Imagem/' + (name === 'mascote' ? 'Mascote' : 'Textura');
-        comp.resize(sz.width, sz.height);
+        comp.name = 'Imagem/' + meta[0];
+        if (name === 'mascote' || name === 'textura') {
+          comp.resize(sz.width, sz.height);
+          secM.appendChild(comp);
+          comp.x = 40 + k * 220; comp.y = 80;
+        } else {
+          // ilustrações grandes viram miniaturas (a imagem mantém a resolução original),
+          // em linhas abaixo do que já está na seção (mascote e textura)
+          if (!added) for (const ch of secM.children) cy = Math.max(cy, ch.y + ch.height + 60);
+          const sc = Math.min(1, 340 / sz.width, 240 / sz.height);
+          comp.resize(Math.round(sz.width * sc), Math.round(sz.height * sc));
+          if (cx > 40 && cx + comp.width > 1160) { cx = 40; cy += rowH + 40; rowH = 0; }
+          secM.appendChild(comp);
+          comp.x = cx; comp.y = cy;
+          cx += comp.width + 40; rowH = Math.max(rowH, comp.height);
+          added = true;
+        }
         comp.fills = [{ type: 'IMAGE', imageHash: img.hash, scaleMode: 'FILL' }];
-        comp.description = name === 'mascote' ? 'Mascote ISTOQUE (caixas empilhadas) usado nas telas de acesso.' : 'Textura de linhas usada a 18% de opacidade nos painéis das telas de acesso.';
-        secM.appendChild(comp);
-        comp.x = 40 + k * 220; comp.y = 80;
+        comp.description = meta[1];
         reg.comps['img:' + name] = comp.id;
       }
     } catch (e) { fail('imagem ' + name, e); }
     k++;
   }
+  if (added) secM.resizeWithoutConstraints(Math.max(secM.width, 1200), Math.max(secM.height, cy + rowH + 60));
   L.saveReg();
 }
 
@@ -194,10 +210,10 @@ async function buildComponents(ds) {
   L.saveReg();
   return sec;
 }
-async function organizeLibrary(sec) {
+async function organizeLibrary(sec, onlyNew) {
   const byGroup = {};
   for (const it of DATA.components) { const c = L.COMPS()[it.id]; if (c) (byGroup[it.group] = byGroup[it.group] || []).push(c); }
-  const cards = [];
+  const cards = [], fresh = [];
   for (const g of DATA.groupOrder) {
     const list = byGroup[g];
     if (!list || !list.length) continue;
@@ -210,8 +226,8 @@ async function organizeLibrary(sec) {
       card.cornerRadius = 24;
       card.setSharedPluginData(NS, 'card', g);
       card.appendChild(T(g, { f: 'Poppins', w: 600, sz: 30, c: '#1f1813', lh: 40 }, { name: 'Título' }));
-      const info = DATA.groupInfo[g] || {};
-      card.appendChild(T((info.desc || '') + (list.length > 1 ? list.length + ' variantes.' : 'Componente único.'), { f: 'Inter', w: 400, sz: 15, c: '#746d67', lh: 24 }, { name: 'Descrição', w: 560 }));
+      const info = DATA.groupInfo[g] || '';
+      card.appendChild(T(info + (list.length > 1 ? list.length + ' variantes.' : 'Componente único.'), { f: 'Inter', w: 400, sz: 15, c: '#746d67', lh: 24 }, { name: 'Descrição', w: 560 }));
       let node;
       if (list.length > 1) {
         node = list[0].parent && list[0].parent.type === 'COMPONENT_SET' ? list[0].parent : figma.combineAsVariants(list, card);
@@ -236,7 +252,22 @@ async function organizeLibrary(sec) {
       }
       sec.appendChild(card);
       cards.push(card);
+      fresh.push(card);
     } catch (e) { fail('organizar grupo ' + g, e); }
+  }
+  if (onlyNew) {
+    // acrescenta os cards novos numa linha abaixo dos que já existem, sem mexer neles
+    if (!fresh.length) return;
+    let y0 = 120;
+    for (const c of cards) if (!fresh.includes(c)) y0 = Math.max(y0, c.y + c.height + 160);
+    let x = 80, y = y0, rowH = 0;
+    for (const c of fresh) {
+      if (x > 80 && x + c.width > 6400) { x = 80; y += rowH + 80; rowH = 0; }
+      c.x = x; c.y = y;
+      x += c.width + 80; rowH = Math.max(rowH, c.height);
+    }
+    sec.resizeWithoutConstraints(Math.max(sec.width, 6480), Math.max(sec.height, y + rowH + 120));
+    return;
   }
   // fluxo em linhas
   let x = 80, y = 120, rowH = 0;
@@ -250,11 +281,12 @@ async function organizeLibrary(sec) {
 }
 
 // ---------------------------------------------------------------- telas
-async function buildScreens(pages) {
+async function buildScreens(pages, only) {
   const frames = {};
-  const total = DATA.sections.reduce((a, s) => a + s.keys.length, 0);
+  const sections = DATA.sections.filter((S) => !only || S.keys.some((k) => only.includes(k)));
+  const total = sections.reduce((a, s) => a + s.keys.length, 0);
   let n = 0;
-  for (const S of DATA.sections) {
+  for (const S of sections) {
     const page = pages[S.page];
     const sec = section(page, S.name, S.x, S.y, 400, 400);
     for (const ch of sec.children.slice()) if (ch.getSharedPluginData(NS, 'screen')) ch.remove();
@@ -297,10 +329,22 @@ async function buildOne(key, parent, x, y) {
 }
 
 // ---------------------------------------------------------------- protótipo
+function collectFrames(pages) {
+  const out = {};
+  for (const p of pages) for (const n of p.children) {
+    for (const c of n.type === 'SECTION' ? n.children : [n]) { const k = c.getSharedPluginData(NS, 'screen'); if (k && !out[k]) out[k] = c; }
+  }
+  return out;
+}
 function toAction(a, key, frames) {
   const plat = key.split('/')[0];
   if (a.close) return { type: 'CLOSE' };
   if (a.back) return { type: 'BACK' };
+  if (a.scroll) {
+    const dest = nodeAt(frames[key], a.scroll);
+    if (!dest) return null;
+    return { type: 'NODE', destinationId: dest.id, navigation: 'SCROLL_TO', transition: { type: 'SCROLL_ANIMATE', easing: { type: 'EASE_IN_AND_OUT' }, duration: 0.6 } };
+  }
   const dest = frames[plat + '/' + (a.nav || a.overlay || a.swap)];
   if (!dest) return null;
   return {
@@ -311,8 +355,9 @@ function toAction(a, key, frames) {
     preserveScrollPosition: false,
   };
 }
-async function wire(frames, pages) {
+async function wire(frames, pages, only) {
   for (const [key, links] of Object.entries(DATA.links)) {
+    if (only && !only.includes(key)) continue;
     const f = frames[key];
     if (!f) continue;
     const base = DATA.overlays[key] ? f.children[0] : f;
@@ -327,13 +372,15 @@ async function wire(frames, pages) {
       } catch (e) { fail('interação em ' + DATA.names[key], e); }
     }
   }
-  const t = frames['desktop/toast'];
+  const t = !only && frames['desktop/toast'];
   if (t) {
     try { await t.setReactionsAsync([{ trigger: { type: 'AFTER_TIMEOUT', timeout: 2.5 }, actions: [{ type: 'CLOSE' }] }]); } catch (e) { fail('toast', e); }
   }
   for (const fl of DATA.flows) {
     const page = pages[fl.page];
-    const pts = fl.points.filter((p) => frames[p.key]).map((p) => ({ nodeId: frames[p.key].id, name: p.name }));
+    let pts = fl.points.filter((p) => frames[p.key] && (!only || only.includes(p.key))).map((p) => ({ nodeId: frames[p.key].id, name: p.name }));
+    // só o site: mantém os fluxos que já existem e põe o do site na frente
+    if (only) { if (!pts.length) continue; pts = pts.concat(page.flowStartingPoints.filter((q) => !pts.some((p) => p.name === q.name || p.nodeId === q.nodeId))); }
     try { page.flowStartingPoints = pts; } catch (e) { fail('fluxos de ' + page.name, e); }
   }
 }
@@ -526,6 +573,8 @@ async function buildLogoSection(page, LOGOS, x, y) {
 
 // ---------------------------------------------------------------- principal
 async function main() {
+  // 'site': só cria/atualiza a landing page e os planos, sem refazer as outras telas
+  const only = figma.command === 'site' ? DATA.siteKeys : null;
   await progress('preparando páginas e fontes…');
   const pages = await ensurePages();
   const [ds, desk, mob] = pages;
@@ -535,17 +584,17 @@ async function main() {
   await L.init();
   await progress('biblioteca de componentes…');
   const sec = await buildComponents(ds);
-  await organizeLibrary(sec);
+  await organizeLibrary(sec, !!only);
   await progress('capa e fundamentos…');
   try { await buildCover(ds); } catch (e) { fail('capa', e); }
   try { await buildFoundations(ds); } catch (e) { fail('fundamentos', e); }
   try { await buildLogoSection(ds, DATA.logos, 1540, 0); } catch (e) { fail('logo', e); }
-  const frames = await buildScreens([ds, desk, mob]);
+  const frames = Object.assign(collectFrames([ds, desk, mob]), await buildScreens([ds, desk, mob], only));
   await progress('ligando interações do protótipo…');
-  await wire(frames, [ds, desk, mob]);
+  await wire(frames, [ds, desk, mob], only);
   L.saveReg();
   await figma.setCurrentPageAsync(desk);
-  const first = frames['desktop/login'] || frames['desktop/dashboard'];
+  const first = frames['desktop/landing'] || frames['desktop/login'] || frames['desktop/dashboard'];
   if (first) figma.viewport.scrollAndZoomIntoView([first]);
   if (toast) toast.cancel();
   const warn = L.warn.length ? ' · avisos: ' + L.warn.length : '';

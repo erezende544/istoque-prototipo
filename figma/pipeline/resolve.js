@@ -3,7 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 const DIR = __dirname;
-const comps = JSON.parse(fs.readFileSync(path.join(DIR, 'fig2', 'components.json')));
+const comps = JSON.parse(fs.readFileSync(path.join(DIR, 'fig2', 'components.json')))
+  .concat(fs.existsSync(path.join(DIR, 'fig2', 'site_components.json')) ? JSON.parse(fs.readFileSync(path.join(DIR, 'fig2', 'site_components.json'))) : []);
 const byId = Object.fromEntries(comps.map((c) => [c.id, c]));
 const clone = (o) => JSON.parse(JSON.stringify(o));
 function expand(n) {
@@ -44,7 +45,8 @@ function applyOp(root, p, k, v) {
     if (typeof v === 'string' && v.startsWith('icon:')) n.icon = v.slice(5);
     else if (typeof v === 'string' && v.startsWith('art:')) n.art = v.slice(4);
     else { const e = expandComp(v); const keep = { x: n.x, y: n.y, w: n.w, h: n.h }; for (const key of Object.keys(n)) delete n[key]; Object.assign(n, e, keep, { _comp: v, _group: byId[v].group, _vname: byId[v].name }); }
-  } else if (k === 'f') n.f = v; else if (k === 's') n.s = n.s ? { ...n.s, c: v } : n.s; else if (k === 'i') n.c = v; else if (k === 'p' && n.L) n.L[2] = v;
+  } else if (k === 'g') n.img = v;
+  else if (k === 'f') n.f = v; else if (k === 's') n.s = n.s ? { ...n.s, c: v } : n.s; else if (k === 'i') n.c = v; else if (k === 'p' && n.L) n.L[2] = v;
 }
 function loadScreen(key) { return expand(JSON.parse(fs.readFileSync(path.join(DIR, 'fig2', key + '.json')))); }
 module.exports = { expand, loadScreen, byId, comps };

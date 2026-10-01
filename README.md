@@ -10,7 +10,7 @@ O protótipo é um arquivo HTML único (`index.html`) com dados de demonstraçã
 
 As mesmas telas, em alta fidelidade e editáveis, estão no Figma: https://www.figma.com/design/lzqDPhDmWXvfqF5hGT7hQv
 
-São 32 telas e estados desktop, com os modais, e 15 telas mobile, além do design system (cores, tipografia, ícones e 147 variantes de componentes) e do protótipo navegável. A pasta [`figma/`](figma/README.md) explica o conteúdo do arquivo, como gerar o que falta com o plugin incluído e como apresentar o protótipo.
+O arquivo tem 32 telas e estados desktop, com os modais, e 15 telas mobile. Tem também a landing page e a página de planos do site, reconstruídas a partir dos PDFs exportados do Figma, o design system (cores, tipografia, ícones e 165 variantes de componentes) e o protótipo navegável. A pasta [`figma/`](figma/README.md) explica o conteúdo do arquivo, como gerar o que falta com o plugin incluído e como apresentar o protótipo.
 
 Trabalho Interdisciplinar do curso de Análise e Desenvolvimento de Sistemas da PUC Minas.
 

@@ -1,0 +1,2657 @@
+{
+ "texts": [
+  {
+   "path": 5,
+   "rect": [
+    497.5,
+    48.09,
+    539.03,
+    59.17
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8667,
+   "family": "Inter",
+   "weight": 500,
+   "upper": false,
+   "score": 0.0026,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 42.21,
+     "s": "Home",
+     "x0": 497.5,
+     "x1": 539.71,
+     "xend": 539.71,
+     "base": 59.0,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 6,
+   "rect": [
+    572.5,
+    47.65,
+    688.41,
+    59.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8667,
+   "family": "Inter",
+   "weight": 500,
+   "upper": false,
+   "score": 0.0043,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 116.427,
+     "s": "Funcionalidades",
+     "x0": 572.5,
+     "x1": 688.927,
+     "xend": 688.927,
+     "base": 59.0,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 7,
+   "rect": [
+    721.5,
+    48.09,
+    768.73,
+    59.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8667,
+   "family": "Inter",
+   "weight": 500,
+   "upper": false,
+   "score": 0.003,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 47.85,
+     "s": "Planos",
+     "x0": 721.5,
+     "x1": 769.35,
+     "xend": 769.35,
+     "base": 59.0,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 8,
+   "rect": [
+    801.5,
+    47.94,
+    858.48,
+    59.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8667,
+   "family": "Inter",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0102,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 57.621,
+     "s": "Contato",
+     "x0": 801.5,
+     "x1": 859.121,
+     "xend": 859.121,
+     "base": 59.0,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 9,
+   "rect": [
+    1081.0,
+    48.09,
+    1125.02,
+    59.17
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0054,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 44.266,
+     "s": "Entrar",
+     "x0": 1081.0,
+     "x1": 1125.266,
+     "xend": 1125.266,
+     "base": 59.0,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 11,
+   "rect": [
+    1166.0,
+    48.59,
+    1271.04,
+    62.64
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0041,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 61.404,
+     "s": "Começar Grátis",
+     "x0": 1166.0,
+     "x1": 1271.505,
+     "xend": 1271.505,
+     "base": 59.5,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 4,
+   "rect": [
+    188.0,
+    46.06,
+    275.1,
+    67.35
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 700,
+   "upper": false,
+   "score": 0.0,
+   "ls": -0.504,
+   "size": 22.0,
+   "lines": [
+    {
+     "w1": 87.718,
+     "s": "Is.toque",
+     "x0": 188.0,
+     "x1": 275.718,
+     "xend": 275.718,
+     "base": 61.5,
+     "size": 22.0
+    }
+   ]
+  },
+  {
+   "path": 16,
+   "rect": [
+    130.0,
+    213.13,
+    303.1,
+    224.16
+   ],
+   "fill": "#164d4e",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": false,
+   "score": 0.0089,
+   "ls": 0.657,
+   "size": 11.0,
+   "lines": [
+    {
+     "w1": 20.107,
+     "s": "Nº1 EM GESTÃO DE ESTOQUE",
+     "x0": 130.0,
+     "x1": 303.568,
+     "xend": 303.568,
+     "base": 223.5,
+     "size": 11.0
+    }
+   ]
+  },
+  {
+   "path": 18,
+   "rect": [
+    332.0,
+    214.5,
+    477.39,
+    223.62
+   ],
+   "fill": "#f5b84f",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0044,
+   "ls": 0,
+   "size": 11.0,
+   "lines": [
+    {
+     "w1": 11.495,
+     "s": "★ Focado em Restaurantes",
+     "x0": 332.0,
+     "x1": 477.7,
+     "xend": 477.7,
+     "base": 223.5,
+     "size": 11.0
+    }
+   ]
+  },
+  {
+   "path": 19,
+   "rect": [
+    120.0,
+    269.54,
+    554.99,
+    441.86
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": -1.085,
+   "size": 54.0,
+   "lines": [
+    {
+     "w1": 99.768,
+     "s": "Seu estoque sob ",
+     "x0": 120.0,
+     "x1": 556.775,
+     "xend": 568.533,
+     "base": 309.5,
+     "size": 54.0
+    },
+    {
+     "w1": 233.258,
+     "s": "controle, sem ",
+     "x0": 120.0,
+     "x1": 481.146,
+     "xend": 492.91,
+     "base": 368.5,
+     "size": 54.0
+    },
+    {
+     "w1": 364.92,
+     "s": "complicação.",
+     "x0": 120.0,
+     "x1": 484.92,
+     "xend": 484.92,
+     "base": 427.5,
+     "size": 54.0
+    }
+   ]
+  },
+  {
+   "path": 20,
+   "rect": [
+    120.0,
+    476.82,
+    647.16,
+    556.59
+   ],
+   "fill": "#f9f6ef",
+   "op": 0.8667,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0064,
+   "ls": 0,
+   "size": 20.0,
+   "lines": [
+    {
+     "w1": 80.826,
+     "s": "Controle de entradas, saídas e perdas de insumos em ",
+     "x0": 120.0,
+     "x1": 627.292,
+     "xend": 632.912,
+     "base": 492.5,
+     "size": 20.0
+    },
+    {
+     "w1": 60.256,
+     "s": "tempo real. Feito sob medida para restaurantes que não ",
+     "x0": 120.0,
+     "x1": 647.764,
+     "xend": 653.384,
+     "base": 522.5,
+     "size": 20.0
+    },
+    {
+     "w1": 71.516,
+     "s": "toleram desperdício e planilhas confusas.",
+     "x0": 120.0,
+     "x1": 510.082,
+     "xend": 510.082,
+     "base": 552.5,
+     "size": 20.0
+    }
+   ]
+  },
+  {
+   "path": 22,
+   "rect": [
+    152.0,
+    613.03,
+    317.86,
+    629.09
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0029,
+   "ls": 0,
+   "size": 16.0,
+   "lines": [
+    {
+     "w1": 70.176,
+     "s": "Começar grátis agora",
+     "x0": 152.0,
+     "x1": 318.738,
+     "xend": 318.738,
+     "base": 625.5,
+     "size": 16.0
+    }
+   ]
+  },
+  {
+   "path": 30,
+   "rect": [
+    644.0,
+    927.15,
+    794.92,
+    936.12
+   ],
+   "fill": "#059cbc",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": true,
+   "score": 0.006,
+   "ls": 0.961,
+   "size": 12.0,
+   "lines": [
+    {
+     "w1": 73.346,
+     "s": "Controle Absoluto",
+     "x0": 644.0,
+     "x1": 795.405,
+     "xend": 795.405,
+     "base": 936.0,
+     "size": 12.0
+    }
+   ]
+  },
+  {
+   "path": 31,
+   "rect": [
+    248.51,
+    959.24,
+    1190.48,
+    1002.92
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": -0.595,
+   "size": 40.0,
+   "lines": [
+    {
+     "w1": 100.361,
+     "s": "Tudo o que sua cozinha precisa em um só lugar",
+     "x0": 248.513,
+     "x1": 1191.476,
+     "xend": 1191.476,
+     "base": 992.0,
+     "size": 40.0
+    }
+   ]
+  },
+  {
+   "path": 32,
+   "rect": [
+    381.88,
+    1022.89,
+    1056.73,
+    1067.68
+   ],
+   "fill": "#746d67",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0058,
+   "ls": 0,
+   "size": 18.0,
+   "lines": [
+    {
+     "w1": 133.988,
+     "s": "Desenvolvemos uma interface ultra-amigável para registrar dados de forma ágil ",
+     "x0": 381.885,
+     "x1": 1057.574,
+     "xend": 1062.632,
+     "base": 1037.0,
+     "size": 18.0
+    },
+    {
+     "w1": 44.412,
+     "s": "entre as panelas e o caixa.",
+     "x0": 607.14,
+     "x1": 832.703,
+     "xend": 832.703,
+     "base": 1064.0,
+     "size": 18.0
+    }
+   ]
+  },
+  {
+   "path": 43,
+   "rect": [
+    162.0,
+    1433.89,
+    329.28,
+    1442.11
+   ],
+   "fill": "#164d4e",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": true,
+   "score": 0.0069,
+   "ls": 0.658,
+   "size": 11.0,
+   "lines": [
+    {
+     "w1": 65.694,
+     "s": "Controle em Tempo Real",
+     "x0": 162.0,
+     "x1": 329.565,
+     "xend": 329.565,
+     "base": 1442.0,
+     "size": 11.0
+    }
+   ]
+  },
+  {
+   "path": 58,
+   "rect": [
+    572.67,
+    1433.89,
+    711.21,
+    1442.66
+   ],
+   "fill": "#a56b00",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": true,
+   "score": 0.0062,
+   "ls": 0.662,
+   "size": 11.0,
+   "lines": [
+    {
+     "w1": 56.847,
+     "s": "Estoque Inteligente",
+     "x0": 572.667,
+     "x1": 711.827,
+     "xend": 711.827,
+     "base": 1442.0,
+     "size": 11.0
+    }
+   ]
+  },
+  {
+   "path": 73,
+   "rect": [
+    983.33,
+    1433.89,
+    1119.94,
+    1442.11
+   ],
+   "fill": "#b64232",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": true,
+   "score": 0.0026,
+   "ls": 0.663,
+   "size": 11.0,
+   "lines": [
+    {
+     "w1": 66.725,
+     "s": "Auditoria de Perdas",
+     "x0": 983.333,
+     "x1": 1120.358,
+     "xend": 1120.358,
+     "base": 1442.0,
+     "size": 11.0
+    }
+   ]
+  },
+  {
+   "path": 44,
+   "rect": [
+    152.0,
+    1470.75,
+    401.61,
+    1521.2
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": 0,
+   "size": 22.0,
+   "lines": [
+    {
+     "w1": 104.148,
+     "s": "Registros de Entrada e ",
+     "x0": 152.0,
+     "x1": 402.338,
+     "xend": 407.574,
+     "base": 1488.0,
+     "size": 22.0
+    },
+    {
+     "w1": 64.526,
+     "s": "Saída",
+     "x0": 152.0,
+     "x1": 216.526,
+     "xend": 216.526,
+     "base": 1521.0,
+     "size": 22.0
+    }
+   ]
+  },
+  {
+   "path": 59,
+   "rect": [
+    562.67,
+    1470.14,
+    815.42,
+    1488.2
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": 0,
+   "size": 22.0,
+   "lines": [
+    {
+     "w1": 79.768,
+     "s": "Alertas de Nível Crítico",
+     "x0": 562.667,
+     "x1": 816.169,
+     "xend": 816.169,
+     "base": 1488.0,
+     "size": 22.0
+    }
+   ]
+  },
+  {
+   "path": 74,
+   "rect": [
+    973.33,
+    1469.98,
+    1257.26,
+    1493.81
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": 0,
+   "size": 22.0,
+   "lines": [
+    {
+     "w1": 112.31,
+     "s": "Relatórios de Desperdício",
+     "x0": 973.333,
+     "x1": 1258.008,
+     "xend": 1258.008,
+     "base": 1488.0,
+     "size": 22.0
+    }
+   ]
+  },
+  {
+   "path": 60,
+   "rect": [
+    562.67,
+    1518.24,
+    839.01,
+    1602.24
+   ],
+   "fill": "#746d67",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0066,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 69.47,
+     "s": "Configure limites mínimos para cada ",
+     "x0": 562.667,
+     "x1": 819.498,
+     "xend": 823.713,
+     "base": 1530.0,
+     "size": 15.0
+    },
+    {
+     "w1": 79.966,
+     "s": "ingrediente e receba e-mails ou alertas ",
+     "x0": 562.667,
+     "x1": 839.574,
+     "xend": 843.789,
+     "base": 1553.0,
+     "size": 15.0
+    },
+    {
+     "w1": 48.255,
+     "s": "visuais imediatos assim que o limite for ",
+     "x0": 562.667,
+     "x1": 838.512,
+     "xend": 842.727,
+     "base": 1576.0,
+     "size": 15.0
+    },
+    {
+     "w1": 61.275,
+     "s": "atingido.",
+     "x0": 562.667,
+     "x1": 623.942,
+     "xend": 623.942,
+     "base": 1599.0,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 75,
+   "rect": [
+    973.33,
+    1518.58,
+    1280.24,
+    1579.24
+   ],
+   "fill": "#746d67",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0057,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 59.851,
+     "s": "Aprenda com as falhas. Classifique motivos ",
+     "x0": 973.333,
+     "x1": 1280.718,
+     "xend": 1284.933,
+     "base": 1530.0,
+     "size": 15.0
+    },
+    {
+     "w1": 18.03,
+     "s": "de quebra (validade, erro de preparo ou ",
+     "x0": 973.333,
+     "x1": 1254.946,
+     "xend": 1259.161,
+     "base": 1553.0,
+     "size": 15.0
+    },
+    {
+     "w1": 51.529,
+     "s": "refugo) e salve centenas de reais por lote.",
+     "x0": 973.333,
+     "x1": 1270.989,
+     "xend": 1270.989,
+     "base": 1576.0,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 45,
+   "rect": [
+    152.0,
+    1551.58,
+    450.17,
+    1612.24
+   ],
+   "fill": "#746d67",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0071,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 35.122,
+     "s": "Toda baixa de insumo efetuada no tablet ",
+     "x0": 152.0,
+     "x1": 440.593,
+     "xend": 444.808,
+     "base": 1563.0,
+     "size": 15.0
+    },
+    {
+     "w1": 54.705,
+     "s": "atualiza o saldo do produto na hora e gera ",
+     "x0": 152.0,
+     "x1": 451.026,
+     "xend": 455.241,
+     "base": 1586.0,
+     "size": 15.0
+    },
+    {
+     "w1": 68.802,
+     "s": "históricos de auditoria para o gerente.",
+     "x0": 152.0,
+     "x1": 421.23,
+     "xend": 421.23,
+     "base": 1609.0,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 81,
+   "rect": [
+    653.0,
+    1887.49,
+    785.99,
+    1899.12
+   ],
+   "fill": "#059cbc",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": true,
+   "score": 0.0039,
+   "ls": 0.961,
+   "size": 12.0,
+   "lines": [
+    {
+     "w1": 57.71,
+     "s": "Simples e Prático",
+     "x0": 653.0,
+     "x1": 786.587,
+     "xend": 786.587,
+     "base": 1899.0,
+     "size": 12.0
+    }
+   ]
+  },
+  {
+   "path": 82,
+   "rect": [
+    298.32,
+    1923.64,
+    1139.84,
+    1965.56
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": -0.603,
+   "size": 40.0,
+   "lines": [
+    {
+     "w1": 171.457,
+     "s": "Controle seu estoque em 3 passos simples",
+     "x0": 298.321,
+     "x1": 1141.682,
+     "xend": 1141.682,
+     "base": 1955.0,
+     "size": 40.0
+    }
+   ]
+  },
+  {
+   "path": 83,
+   "rect": [
+    395.88,
+    1986.5,
+    1043.72,
+    2030.89
+   ],
+   "fill": "#746d67",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0067,
+   "ls": 0,
+   "size": 18.0,
+   "lines": [
+    {
+     "w1": 81.868,
+     "s": "Projetado para ser implementado sem travar a rotina da sua equipe ou exigir ",
+     "x0": 395.877,
+     "x1": 1043.639,
+     "xend": 1048.697,
+     "base": 2000.0,
+     "size": 18.0
+    },
+    {
+     "w1": 111.53,
+     "s": "treinamentos longos.",
+     "x0": 630.87,
+     "x1": 809.018,
+     "xend": 809.018,
+     "base": 2027.0,
+     "size": 18.0
+    }
+   ]
+  },
+  {
+   "path": 87,
+   "rect": [
+    152.0,
+    2138.26,
+    188.33,
+    2164.65
+   ],
+   "fill": "#059cbc",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.1121,
+   "ls": 0,
+   "size": 36.0,
+   "lines": [
+    {
+     "w1": 44.496,
+     "s": "01",
+     "x0": 152.0,
+     "x1": 196.496,
+     "xend": 196.496,
+     "base": 2164.0,
+     "size": 36.0
+    }
+   ]
+  },
+  {
+   "path": 93,
+   "rect": [
+    568.0,
+    2138.26,
+    609.98,
+    2164.65
+   ],
+   "fill": "#059cbc",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0105,
+   "ls": 0,
+   "size": 36.0,
+   "lines": [
+    {
+     "w1": 44.496,
+     "s": "02",
+     "x0": 568.0,
+     "x1": 612.496,
+     "xend": 612.496,
+     "base": 2164.0,
+     "size": 36.0
+    }
+   ]
+  },
+  {
+   "path": 99,
+   "rect": [
+    984.0,
+    2138.26,
+    1025.91,
+    2164.65
+   ],
+   "fill": "#059cbc",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0066,
+   "ls": 0,
+   "size": 36.0,
+   "lines": [
+    {
+     "w1": 44.496,
+     "s": "03",
+     "x0": 984.0,
+     "x1": 1028.496,
+     "xend": 1028.496,
+     "base": 2164.0,
+     "size": 36.0
+    }
+   ]
+  },
+  {
+   "path": 88,
+   "rect": [
+    152.0,
+    2199.32,
+    390.59,
+    2215.18
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": 0,
+   "size": 20.0,
+   "lines": [
+    {
+     "w1": 95.112,
+     "s": "Cadastre seus insumos",
+     "x0": 152.0,
+     "x1": 391.512,
+     "xend": 391.512,
+     "base": 2215.0,
+     "size": 20.0
+    }
+   ]
+  },
+  {
+   "path": 94,
+   "rect": [
+    568.0,
+    2199.32,
+    822.32,
+    2220.46
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": 0,
+   "size": 20.0,
+   "lines": [
+    {
+     "w1": 83.36,
+     "s": "Registre movimentações",
+     "x0": 568.0,
+     "x1": 823.232,
+     "xend": 823.232,
+     "base": 2215.0,
+     "size": 20.0
+    }
+   ]
+  },
+  {
+   "path": 100,
+   "rect": [
+    984.0,
+    2199.32,
+    1259.94,
+    2220.28
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": 0,
+   "size": 20.0,
+   "lines": [
+    {
+     "w1": 125.976,
+     "s": "Acompanhe tudo no painel",
+     "x0": 984.0,
+     "x1": 1261.336,
+     "xend": 1261.336,
+     "base": 2215.0,
+     "size": 20.0
+    }
+   ]
+  },
+  {
+   "path": 89,
+   "rect": [
+    152.0,
+    2248.5,
+    437.36,
+    2304.02
+   ],
+   "fill": "#746d67",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0068,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 51.569,
+     "s": "Importe sua lista de produtos ou crie ",
+     "x0": 152.0,
+     "x1": 394.461,
+     "xend": 398.395,
+     "base": 2259.0,
+     "size": 14.0
+    },
+    {
+     "w1": 83.143,
+     "s": "rapidamente direto no painel com unidades ",
+     "x0": 152.0,
+     "x1": 437.836,
+     "xend": 441.77,
+     "base": 2280.0,
+     "size": 14.0
+    },
+    {
+     "w1": 16.828,
+     "s": "de medida personalizáveis (kg, litro, caixa).",
+     "x0": 152.0,
+     "x1": 436.438,
+     "xend": 436.438,
+     "base": 2301.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 95,
+   "rect": [
+    568.0,
+    2248.34,
+    863.25,
+    2301.18
+   ],
+   "fill": "#746d67",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0068,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 9.464,
+     "s": "A equipe da cozinha faz o lançamento de ",
+     "x0": 568.0,
+     "x1": 840.257,
+     "xend": 844.191,
+     "base": 2259.0,
+     "size": 14.0
+    },
+    {
+     "w1": 58.38,
+     "s": "entradas ou baixas de insumo em tempo real ",
+     "x0": 568.0,
+     "x1": 864.087,
+     "xend": 868.021,
+     "base": 2280.0,
+     "size": 14.0
+    },
+    {
+     "w1": 16.534,
+     "s": "no tablet ou celular de forma visual.",
+     "x0": 568.0,
+     "x1": 803.327,
+     "xend": 803.327,
+     "base": 2301.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 101,
+   "rect": [
+    984.0,
+    2248.02,
+    1277.21,
+    2303.86
+   ],
+   "fill": "#746d67",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0059,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 48.185,
+     "s": "Acesse relatórios analíticos de consumo ",
+     "x0": 984.0,
+     "x1": 1249.326,
+     "xend": 1253.26,
+     "base": 2259.0,
+     "size": 14.0
+    },
+    {
+     "w1": 40.656,
+     "s": "diário, valores de estoque parado, projeções ",
+     "x0": 984.0,
+     "x1": 1277.897,
+     "xend": 1281.831,
+     "base": 2280.0,
+     "size": 14.0
+    },
+    {
+     "w1": 16.828,
+     "s": "de compras e perdas financeiras.",
+     "x0": 984.0,
+     "x1": 1203.622,
+     "xend": 1203.622,
+     "base": 2301.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 103,
+   "rect": [
+    316.75,
+    2560.5,
+    1121.79,
+    2606.62
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 600,
+   "upper": false,
+   "score": 0.0,
+   "ls": -0.874,
+   "size": 44.0,
+   "lines": [
+    {
+     "w1": 184.31,
+     "s": "Comece a controlar seu estoque hoje",
+     "x0": 316.745,
+     "x1": 1123.247,
+     "xend": 1123.247,
+     "base": 2595.0,
+     "size": 44.0
+    }
+   ]
+  },
+  {
+   "path": 104,
+   "rect": [
+    381.28,
+    2627.3,
+    1057.81,
+    2668.2
+   ],
+   "fill": "#164d4e",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0061,
+   "ls": 0,
+   "size": 18.0,
+   "lines": [
+    {
+     "w1": 37.597,
+     "s": "Sem complicação, sem planilhas perdidas. Configure o Is.toque para sua equipe ",
+     "x0": 381.278,
+     "x1": 1058.542,
+     "xend": 1063.6,
+     "base": 2641.0,
+     "size": 18.0
+    },
+    {
+     "w1": 26.118,
+     "s": "em menos de 5 minutos.",
+     "x0": 615.894,
+     "x1": 824.037,
+     "xend": 824.037,
+     "base": 2668.0,
+     "size": 18.0
+    }
+   ]
+  },
+  {
+   "path": 106,
+   "rect": [
+    615.0,
+    2727.53,
+    799.88,
+    2743.45
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 600,
+   "upper": false,
+   "score": 0.004,
+   "ls": 0,
+   "size": 16.0,
+   "lines": [
+    {
+     "w1": 37.904,
+     "s": "Criar minha conta grátis",
+     "x0": 615.0,
+     "x1": 800.425,
+     "xend": 800.425,
+     "base": 2740.0,
+     "size": 16.0
+    }
+   ]
+  },
+  {
+   "path": 108,
+   "rect": [
+    563.5,
+    2776.83,
+    875.48,
+    2789.84
+   ],
+   "fill": "#164d4e",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 500,
+   "upper": false,
+   "score": 0.0073,
+   "ls": 0,
+   "size": 13.0,
+   "lines": [
+    {
+     "w1": 24.939,
+     "s": "Não exige cartão de crédito · Ativação instantânea",
+     "x0": 563.5,
+     "x1": 876.377,
+     "xend": 876.377,
+     "base": 2787.0,
+     "size": 13.0
+    }
+   ]
+  },
+  {
+   "path": 115,
+   "rect": [
+    800.0,
+    2969.68,
+    872.09,
+    2980.14
+   ],
+   "fill": "#f5b84f",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": true,
+   "score": 0.0044,
+   "ls": 0.564,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 72.772,
+     "s": "Produto",
+     "x0": 800.0,
+     "x1": 872.772,
+     "xend": 872.772,
+     "base": 2980.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 120,
+   "rect": [
+    1000.0,
+    2969.68,
+    1070.64,
+    2980.14
+   ],
+   "fill": "#f5b84f",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": true,
+   "score": 0.0042,
+   "ls": 0.556,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 70.914,
+     "s": "Empresa",
+     "x0": 1000.0,
+     "x1": 1070.914,
+     "xend": 1070.914,
+     "base": 2980.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 125,
+   "rect": [
+    1200.0,
+    2969.68,
+    1246.97,
+    2980.14
+   ],
+   "fill": "#f5b84f",
+   "op": 1.0,
+   "family": "Inter",
+   "weight": 700,
+   "upper": true,
+   "score": 0.0035,
+   "ls": 0.563,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 47.49,
+     "s": "Legal",
+     "x0": 1200.0,
+     "x1": 1247.49,
+     "xend": 1247.49,
+     "base": 2980.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 111,
+   "rect": [
+    127.5,
+    2975.97,
+    139.65,
+    2986.62
+   ],
+   "fill": "#164d4e",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 700,
+   "upper": false,
+   "score": 0.0,
+   "ls": 0,
+   "size": 15.0,
+   "lines": [
+    {
+     "w1": 12.795,
+     "s": "Is",
+     "x0": 127.5,
+     "x1": 140.295,
+     "xend": 140.295,
+     "base": 2986.5,
+     "size": 15.0
+    }
+   ]
+  },
+  {
+   "path": 112,
+   "rect": [
+    156.0,
+    2973.96,
+    238.37,
+    2993.32
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "family": "Poppins",
+   "weight": 700,
+   "upper": false,
+   "score": 0.0,
+   "ls": 0,
+   "size": 20.0,
+   "lines": [
+    {
+     "w1": 82.94,
+     "s": "Is.toque",
+     "x0": 156.0,
+     "x1": 238.94,
+     "xend": 238.94,
+     "base": 2988.0,
+     "size": 20.0
+    }
+   ]
+  },
+  {
+   "path": 116,
+   "rect": [
+    800.0,
+    3002.5,
+    906.33,
+    3013.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0057,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 106.919,
+     "s": "Funcionalidades",
+     "x0": 800.0,
+     "x1": 906.919,
+     "xend": 906.919,
+     "base": 3013.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 121,
+   "rect": [
+    1000.0,
+    3002.02,
+    1066.2,
+    3013.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0046,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 39.074,
+     "s": "Sobre nós",
+     "x0": 1000.0,
+     "x1": 1066.85,
+     "xend": 1066.85,
+     "base": 3013.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 126,
+   "rect": [
+    1200.0,
+    3002.82,
+    1248.38,
+    3013.16
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0042,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 49.048,
+     "s": "Termos",
+     "x0": 1200.0,
+     "x1": 1249.048,
+     "xend": 1249.048,
+     "base": 3013.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 113,
+   "rect": [
+    120.0,
+    3025.34,
+    454.04,
+    3081.02
+   ],
+   "fill": "#fffdf8",
+   "op": 0.7333,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0069,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 88.84,
+     "s": "Simplificando a gestão de compras e estoque para ",
+     "x0": 120.0,
+     "x1": 454.859,
+     "xend": 458.793,
+     "base": 3036.0,
+     "size": 14.0
+    },
+    {
+     "w1": 87.151,
+     "s": "restaurantes, bistrôs e pequenos negócios ",
+     "x0": 120.0,
+     "x1": 401.47,
+     "xend": 405.404,
+     "base": 3057.0,
+     "size": 14.0
+    },
+    {
+     "w1": 101.491,
+     "s": "gastronômicos.",
+     "x0": 120.0,
+     "x1": 221.491,
+     "xend": 221.491,
+     "base": 3078.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 117,
+   "rect": [
+    800.0,
+    3035.82,
+    843.26,
+    3046.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0044,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 43.929,
+     "s": "Planos",
+     "x0": 800.0,
+     "x1": 843.929,
+     "xend": 843.929,
+     "base": 3046.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 122,
+   "rect": [
+    1000.0,
+    3035.82,
+    1028.24,
+    3049.02
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0043,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 29.293,
+     "s": "Blog",
+     "x0": 1000.0,
+     "x1": 1029.293,
+     "xend": 1029.293,
+     "base": 3046.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 127,
+   "rect": [
+    1200.0,
+    3035.5,
+    1276.73,
+    3046.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0053,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 77.364,
+     "s": "Privacidade",
+     "x0": 1200.0,
+     "x1": 1277.364,
+     "xend": 1277.364,
+     "base": 3046.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 118,
+   "rect": [
+    800.0,
+    3068.68,
+    852.08,
+    3081.86
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0092,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 52.746,
+     "s": "Suporte",
+     "x0": 800.0,
+     "x1": 852.746,
+     "xend": 852.746,
+     "base": 3079.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 123,
+   "rect": [
+    1000.0,
+    3068.5,
+    1061.0,
+    3079.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0049,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 61.647,
+     "s": "Parceiros",
+     "x0": 1000.0,
+     "x1": 1061.647,
+     "xend": 1061.647,
+     "base": 3079.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 128,
+   "rect": [
+    1200.0,
+    3068.68,
+    1269.67,
+    3082.02
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0053,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 70.732,
+     "s": "Segurança",
+     "x0": 1200.0,
+     "x1": 1270.732,
+     "xend": 1270.732,
+     "base": 3079.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 119,
+   "rect": [
+    800.0,
+    3101.68,
+    869.67,
+    3115.02
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0053,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 70.732,
+     "s": "Segurança",
+     "x0": 800.0,
+     "x1": 870.732,
+     "xend": 870.732,
+     "base": 3112.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 124,
+   "rect": [
+    1000.0,
+    3101.68,
+    1052.34,
+    3112.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 500,
+   "upper": false,
+   "score": 0.0127,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 53.015,
+     "s": "Contato",
+     "x0": 1000.0,
+     "x1": 1053.015,
+     "xend": 1053.015,
+     "base": 3112.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 129,
+   "rect": [
+    1200.0,
+    3101.5,
+    1258.32,
+    3112.18
+   ],
+   "fill": "#fffdf8",
+   "op": 0.8,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0099,
+   "ls": 0,
+   "size": 14.0,
+   "lines": [
+    {
+     "w1": 59.326,
+     "s": "Auditoria",
+     "x0": 1200.0,
+     "x1": 1259.326,
+     "xend": 1259.326,
+     "base": 3112.0,
+     "size": 14.0
+    }
+   ]
+  },
+  {
+   "path": 114,
+   "rect": [
+    120.0,
+    3110.25,
+    407.71,
+    3122.66
+   ],
+   "fill": "#fffdf8",
+   "op": 0.5333,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0067,
+   "ls": 0,
+   "size": 13.0,
+   "lines": [
+    {
+     "w1": 11.882,
+     "s": "© 2026 Is.toque. Todos os direitos reservados.",
+     "x0": 120.0,
+     "x1": 408.438,
+     "xend": 408.438,
+     "base": 3120.0,
+     "size": 13.0
+    }
+   ]
+  },
+  {
+   "path": 131,
+   "rect": [
+    120.0,
+    3264.07,
+    590.63,
+    3276.81
+   ],
+   "fill": "#fffdf8",
+   "op": 0.5333,
+   "family": "Inter",
+   "weight": 400,
+   "upper": false,
+   "score": 0.0054,
+   "ls": 0,
+   "size": 13.0,
+   "lines": [
+    {
+     "w1": 82.517,
+     "s": "Desenvolvido com carinho para micro e pequenas operações gastronômicas.",
+     "x0": 120.0,
+     "x1": 591.562,
+     "xend": 591.562,
+     "base": 3274.0,
+     "size": 13.0
+    }
+   ]
+  }
+ ],
+ "shapes": [
+  {
+   "i": 1,
+   "kind": "rect",
+   "rect": [
+    0.0,
+    0.0,
+    1440.0,
+    5000.0
+   ],
+   "fill": "#f9f6ef",
+   "op": 1.0,
+   "level": 1
+  },
+  {
+   "i": 2,
+   "kind": "rect",
+   "rect": [
+    0.0,
+    0.0,
+    1440.0,
+    804.0
+   ],
+   "fill": "#164d4e",
+   "op": 1.0,
+   "level": 1
+  },
+  {
+   "i": 10,
+   "kind": "pill",
+   "rect": [
+    1142.0,
+    33.5,
+    1320.0,
+    74.5
+   ],
+   "fill": "#f5b84f",
+   "op": 1.0,
+   "level": 1,
+   "r": 20.5
+  },
+  {
+   "i": 13,
+   "kind": "pill",
+   "rect": [
+    120.0,
+    208.5,
+    314.0,
+    229.5
+   ],
+   "fill": "#164d4e",
+   "op": 0.0824,
+   "level": 1,
+   "r": 10.5
+  },
+  {
+   "i": 15,
+   "kind": "stroke",
+   "rect": [
+    120.0,
+    208.5,
+    314.0,
+    229.5
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 2
+  },
+  {
+   "i": 17,
+   "kind": "pill",
+   "rect": [
+    322.0,
+    208.5,
+    488.0,
+    229.5
+   ],
+   "fill": "#ffffff",
+   "op": 0.102,
+   "level": 1,
+   "r": 10.5
+  },
+  {
+   "i": 21,
+   "kind": "pill",
+   "rect": [
+    120.0,
+    592.5,
+    375.0,
+    647.5
+   ],
+   "fill": "#f5b84f",
+   "op": 1.0,
+   "level": 1,
+   "r": 27.5
+  },
+  {
+   "i": 26,
+   "kind": "rrect",
+   "rect": [
+    740.0,
+    188.0,
+    1320.0,
+    668.0
+   ],
+   "fill": "#000000",
+   "op": 1.0,
+   "level": 3,
+   "r": 24.0
+  },
+  {
+   "i": 35,
+   "kind": "rrect",
+   "rect": [
+    120.0,
+    1135.0,
+    498.67,
+    1647.0
+   ],
+   "fill": "#000000",
+   "op": 1.0,
+   "level": 3,
+   "r": 16.0
+  },
+  {
+   "i": 38,
+   "kind": "rrect",
+   "rect": [
+    120.0,
+    1135.0,
+    498.67,
+    1647.0
+   ],
+   "fill": "#fffdf8",
+   "op": 1.0,
+   "level": 3,
+   "r": 16.0
+  },
+  {
+   "i": 40,
+   "kind": "pill",
+   "rect": [
+    152.0,
+    1427.0,
+    340.0,
+    1448.0
+   ],
+   "fill": "#164d4e",
+   "op": 0.0824,
+   "level": 3,
+   "r": 10.5
+  },
+  {
+   "i": 42,
+   "kind": "stroke",
+   "rect": [
+    152.0,
+    1427.0,
+    340.0,
+    1448.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 4
+  },
+  {
+   "i": 47,
+   "kind": "stroke",
+   "rect": [
+    120.0,
+    1135.0,
+    498.67,
+    1647.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 2
+  },
+  {
+   "i": 50,
+   "kind": "rrect",
+   "rect": [
+    530.67,
+    1135.0,
+    909.33,
+    1637.0
+   ],
+   "fill": "#000000",
+   "op": 1.0,
+   "level": 3,
+   "r": 16.0
+  },
+  {
+   "i": 53,
+   "kind": "rrect",
+   "rect": [
+    530.67,
+    1135.0,
+    909.33,
+    1637.0
+   ],
+   "fill": "#fffdf8",
+   "op": 1.0,
+   "level": 3,
+   "r": 16.0
+  },
+  {
+   "i": 55,
+   "kind": "pill",
+   "rect": [
+    562.67,
+    1427.0,
+    722.67,
+    1448.0
+   ],
+   "fill": "#fff0ca",
+   "op": 1.0,
+   "level": 3,
+   "r": 10.5
+  },
+  {
+   "i": 57,
+   "kind": "stroke",
+   "rect": [
+    562.67,
+    1427.0,
+    722.67,
+    1448.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 4
+  },
+  {
+   "i": 62,
+   "kind": "stroke",
+   "rect": [
+    530.67,
+    1135.0,
+    909.33,
+    1637.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 2
+  },
+  {
+   "i": 65,
+   "kind": "rrect",
+   "rect": [
+    941.33,
+    1135.0,
+    1320.0,
+    1614.0
+   ],
+   "fill": "#000000",
+   "op": 1.0,
+   "level": 3,
+   "r": 16.0
+  },
+  {
+   "i": 68,
+   "kind": "rrect",
+   "rect": [
+    941.33,
+    1135.0,
+    1320.0,
+    1614.0
+   ],
+   "fill": "#fffdf8",
+   "op": 1.0,
+   "level": 3,
+   "r": 16.0
+  },
+  {
+   "i": 70,
+   "kind": "pill",
+   "rect": [
+    973.33,
+    1427.0,
+    1131.33,
+    1448.0
+   ],
+   "fill": "#ffe2dc",
+   "op": 1.0,
+   "level": 3,
+   "r": 10.5
+  },
+  {
+   "i": 72,
+   "kind": "stroke",
+   "rect": [
+    973.33,
+    1427.0,
+    1131.33,
+    1448.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 4
+  },
+  {
+   "i": 77,
+   "kind": "stroke",
+   "rect": [
+    941.33,
+    1135.0,
+    1320.0,
+    1614.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 2
+  },
+  {
+   "i": 78,
+   "kind": "rect",
+   "rect": [
+    0.0,
+    1767.0,
+    1440.0,
+    2458.0
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "level": 1
+  },
+  {
+   "i": 80,
+   "kind": "stroke",
+   "rect": [
+    0.0,
+    1767.0,
+    1440.0,
+    2458.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "level": 2
+  },
+  {
+   "i": 84,
+   "kind": "rrect",
+   "rect": [
+    120.0,
+    2098.0,
+    488.0,
+    2338.0
+   ],
+   "fill": "#f9f6ef",
+   "op": 1.0,
+   "level": 1,
+   "r": 12.0
+  },
+  {
+   "i": 86,
+   "kind": "stroke",
+   "rect": [
+    120.0,
+    2098.0,
+    488.0,
+    2338.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 2
+  },
+  {
+   "i": 90,
+   "kind": "rrect",
+   "rect": [
+    536.0,
+    2098.0,
+    904.0,
+    2338.0
+   ],
+   "fill": "#f9f6ef",
+   "op": 1.0,
+   "level": 1,
+   "r": 12.0
+  },
+  {
+   "i": 92,
+   "kind": "stroke",
+   "rect": [
+    536.0,
+    2098.0,
+    904.0,
+    2338.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 2
+  },
+  {
+   "i": 96,
+   "kind": "rrect",
+   "rect": [
+    952.0,
+    2098.0,
+    1320.0,
+    2338.0
+   ],
+   "fill": "#f9f6ef",
+   "op": 1.0,
+   "level": 1,
+   "r": 12.0
+  },
+  {
+   "i": 98,
+   "kind": "stroke",
+   "rect": [
+    952.0,
+    2098.0,
+    1320.0,
+    2338.0
+   ],
+   "fill": "#e8e1d6",
+   "op": 1.0,
+   "ws": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "level": 2
+  },
+  {
+   "i": 102,
+   "kind": "rect",
+   "rect": [
+    0.0,
+    2458.0,
+    1440.0,
+    2886.0
+   ],
+   "fill": "#f5b84f",
+   "op": 1.0,
+   "level": 1
+  },
+  {
+   "i": 105,
+   "kind": "pill",
+   "rect": [
+    583.0,
+    2707.0,
+    857.0,
+    2762.0
+   ],
+   "fill": "#164d4e",
+   "op": 1.0,
+   "level": 1,
+   "r": 27.5
+  },
+  {
+   "i": 109,
+   "kind": "rect",
+   "rect": [
+    0.0,
+    2886.0,
+    1440.0,
+    3335.0
+   ],
+   "fill": "#164d4e",
+   "op": 1.0,
+   "level": 1
+  },
+  {
+   "i": 110,
+   "kind": "rrect",
+   "rect": [
+    120.0,
+    2967.0,
+    148.0,
+    2995.0
+   ],
+   "fill": "#f5b84f",
+   "op": 1.0,
+   "level": 1,
+   "r": 5.0
+  },
+  {
+   "i": 130,
+   "kind": "rect",
+   "rect": [
+    120.0,
+    3186.0,
+    1320.0,
+    3187.0
+   ],
+   "fill": "#ffffff",
+   "op": 0.102,
+   "level": 1
+  },
+  {
+   "i": 132,
+   "kind": "ellipse",
+   "rect": [
+    1180.0,
+    3251.0,
+    1216.0,
+    3287.0
+   ],
+   "fill": "#ffffff",
+   "op": 0.0706,
+   "level": 1
+  },
+  {
+   "i": 134,
+   "kind": "ellipse",
+   "rect": [
+    1232.0,
+    3251.0,
+    1268.0,
+    3287.0
+   ],
+   "fill": "#ffffff",
+   "op": 0.0706,
+   "level": 1
+  },
+  {
+   "i": 136,
+   "kind": "ellipse",
+   "rect": [
+    1284.0,
+    3251.0,
+    1320.0,
+    3287.0
+   ],
+   "fill": "#ffffff",
+   "op": 0.0706,
+   "level": 1
+  },
+  {
+   "i": 139,
+   "kind": "rect",
+   "rect": [
+    1294.0,
+    3261.0,
+    1310.0,
+    3277.0
+   ],
+   "fill": "#000000",
+   "op": 1.0,
+   "level": 3
+  }
+ ],
+ "icons": [
+  {
+   "i": 12,
+   "rect": [
+    1282.33,
+    48.24,
+    1294.08,
+    59.77
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "eo": false,
+   "d": "M1.003 4.76C0.451 4.76 0.003 5.208 0.003 5.76C0.003 6.313 0.451 6.76 1.003 6.76L1.003 5.76L1.003 4.76ZM10.337 5.76L11.044 6.467L11.751 5.76L11.044 5.053L10.337 5.76ZM6.377 0.386C5.987 -0.005 5.353 -0.005 4.963 0.386C4.572 0.777 4.572 1.41 4.963 1.8L5.67 1.093L6.377 0.386ZM4.963 9.72C4.572 10.111 4.572 10.744 4.963 11.135C5.353 11.525 5.987 11.525 6.377 11.135L5.67 10.428L4.963 9.72ZM1.003 5.76L1.003 6.76L10.337 6.76L10.337 5.76L10.337 4.76L1.003 4.76L1.003 5.76ZM10.337 5.76L11.044 5.053L6.377 0.386L5.67 1.093L4.963 1.8L9.63 6.467L10.337 5.76L9.63 5.053L4.963 9.72L5.67 10.428L6.377 11.135L11.044 6.467L10.337 5.76Z",
+   "w": 11.75,
+   "h": 11.53
+  },
+  {
+   "i": 23,
+   "rect": [
+    329.33,
+    614.24,
+    341.08,
+    625.77
+   ],
+   "fill": "#1f1813",
+   "op": 1.0,
+   "eo": false,
+   "d": "M1.003 4.76C0.45 4.76 0.003 5.208 0.003 5.76C0.003 6.313 0.45 6.76 1.003 6.76L1.003 5.76L1.003 4.76ZM10.337 5.76L11.044 6.467L11.751 5.76L11.044 5.053L10.337 5.76ZM6.377 0.386C5.987 -0.005 5.353 -0.005 4.963 0.386C4.572 0.777 4.572 1.41 4.963 1.8L5.67 1.093L6.377 0.386ZM4.963 9.72C4.572 10.111 4.572 10.744 4.963 11.135C5.353 11.525 5.987 11.525 6.377 11.135L5.67 10.428L4.963 9.72ZM1.003 5.76L1.003 6.76L10.337 6.76L10.337 5.76L10.337 4.76L1.003 4.76L1.003 5.76ZM10.337 5.76L11.044 5.053L6.377 0.386L5.67 1.093L4.963 1.8L9.63 6.467L10.337 5.76L9.63 5.053L4.963 9.72L5.67 10.428L6.377 11.135L11.044 6.467L10.337 5.76Z",
+   "w": 11.75,
+   "h": 11.53
+  },
+  {
+   "i": 107,
+   "rect": [
+    811.33,
+    2728.74,
+    823.08,
+    2740.26
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "eo": false,
+   "d": "M1.003 4.76C0.451 4.76 0.003 5.208 0.003 5.76C0.003 6.312 0.451 6.76 1.003 6.76L1.003 5.76L1.003 4.76ZM10.337 5.76L11.044 6.467L11.751 5.76L11.044 5.053L10.337 5.76ZM6.377 0.386C5.987 -0.005 5.353 -0.005 4.963 0.386C4.572 0.776 4.572 1.409 4.963 1.8L5.67 1.093L6.377 0.386ZM4.963 9.72C4.572 10.111 4.572 10.744 4.963 11.134C5.353 11.525 5.987 11.525 6.377 11.134L5.67 10.427L4.963 9.72ZM1.003 5.76L1.003 6.76L10.337 6.76L10.337 5.76L10.337 4.76L1.003 4.76L1.003 5.76ZM10.337 5.76L11.044 5.053L6.377 0.386L5.67 1.093L4.963 1.8L9.63 6.467L10.337 5.76L9.63 5.053L4.963 9.72L5.67 10.427L6.377 11.134L11.044 6.467L10.337 5.76Z",
+   "w": 11.75,
+   "h": 11.52
+  },
+  {
+   "i": 133,
+   "rect": [
+    1190.33,
+    3261.33,
+    1205.67,
+    3276.67
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "eo": false,
+   "d": "M11.337 3.003C10.785 3.003 10.337 3.451 10.337 4.003C10.337 4.555 10.785 5.003 11.337 5.003L11.337 4.003L11.337 3.003ZM11.344 5.003C11.896 5.003 12.344 4.555 12.344 4.003C12.344 3.451 11.896 3.003 11.344 3.003L11.344 4.003L11.344 5.003ZM10.337 7.25L9.347 7.397L10.337 7.25ZM8.09 5.003L7.943 5.993L8.09 5.003ZM11.337 4.003L11.337 5.003L11.344 5.003L11.344 4.003L11.344 3.003L11.337 3.003L11.337 4.003ZM4.336 1.003L4.336 2.003L11.004 2.003L11.004 1.003L11.004 0.003L4.336 0.003L4.336 1.003ZM11.004 1.003L11.004 2.003C12.292 2.003 13.337 3.047 13.337 4.336L14.337 4.336L15.337 4.336C15.337 1.943 13.397 0.003 11.004 0.003L11.004 1.003ZM14.337 4.336L13.337 4.336L13.337 11.003L14.337 11.003L15.337 11.003L15.337 4.336L14.337 4.336ZM14.337 11.003L13.337 11.003C13.337 12.292 12.292 13.337 11.004 13.337L11.004 14.337L11.004 15.337C13.397 15.337 15.337 13.397 15.337 11.003L14.337 11.003ZM11.004 14.337L11.004 13.337L4.336 13.337L4.336 14.337L4.336 15.337L11.004 15.337L11.004 14.337ZM4.336 14.337L4.336 13.337C3.048 13.337 2.003 12.292 2.003 11.003L1.003 11.003L0.003 11.003C0.003 13.397 1.943 15.337 4.336 15.337L4.336 14.337ZM1.003 11.003L2.003 11.003L2.003 4.336L1.003 4.336L0.003 4.336L0.003 11.003L1.003 11.003ZM1.003 4.336L2.003 4.336C2.003 3.047 3.048 2.003 4.336 2.003L4.336 1.003L4.336 0.003C1.943 0.003 0.003 1.943 0.003 4.336L1.003 4.336ZM10.337 7.25L9.347 7.397C9.399 7.744 9.34 8.098 9.178 8.409L10.066 8.87L10.953 9.33C11.309 8.646 11.439 7.866 11.326 7.103L10.337 7.25ZM10.066 8.87L9.178 8.409C9.017 8.72 8.761 8.972 8.448 9.13L8.898 10.024L9.347 10.917C10.036 10.57 10.598 10.015 10.953 9.33L10.066 8.87ZM8.898 10.024L8.448 9.13C8.135 9.288 7.78 9.343 7.434 9.287L7.275 10.274L7.116 11.262C7.878 11.384 8.658 11.264 9.347 10.917L8.898 10.024ZM7.275 10.274L7.434 9.287C7.088 9.231 6.768 9.068 6.52 8.82L5.813 9.527L5.106 10.234C5.651 10.78 6.355 11.139 7.116 11.262L7.275 10.274ZM5.813 9.527L6.52 8.82C6.272 8.572 6.109 8.252 6.053 7.906L5.066 8.065L4.078 8.224C4.201 8.985 4.56 9.689 5.106 10.234L5.813 9.527ZM5.066 8.065L6.053 7.906C5.997 7.56 6.052 7.205 6.21 6.892L5.316 6.442L4.423 5.993C4.076 6.682 3.956 7.462 4.078 8.224L5.066 8.065ZM5.316 6.442L6.21 6.892C6.367 6.579 6.62 6.323 6.931 6.162L6.47 5.274L6.01 4.387C5.325 4.742 4.77 5.304 4.423 5.993L5.316 6.442ZM6.47 5.274L6.931 6.162C7.242 6 7.596 5.941 7.943 5.993L8.09 5.003L8.237 4.014C7.474 3.901 6.694 4.031 6.01 4.387L6.47 5.274ZM8.09 5.003L7.943 5.993C8.297 6.045 8.624 6.21 8.877 6.463L9.584 5.755L10.291 5.048C9.735 4.492 9.015 4.129 8.237 4.014L8.09 5.003ZM9.584 5.755L8.877 6.463C9.13 6.716 9.295 7.043 9.347 7.397L10.337 7.25L11.326 7.103C11.21 6.325 10.848 5.605 10.291 5.048L9.584 5.755Z",
+   "w": 15.34,
+   "h": 15.34
+  },
+  {
+   "i": 135,
+   "rect": [
+    1245.67,
+    3261.33,
+    1255.28,
+    3276.67
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "eo": false,
+   "d": "M8.33 1.003L9.33 1.003L9.33 0.003L8.33 0.003L8.33 1.003ZM6.33 1.003L6.33 0.003L6.33 1.003ZM2.997 4.336L1.997 4.336L2.997 4.336ZM2.997 6.337L2.997 7.337L3.997 7.337L3.997 6.337L2.997 6.337ZM0.997 6.337L0.997 5.337L-0.003 5.337L-0.003 6.337L0.997 6.337ZM0.997 9.003L-0.003 9.003L-0.003 10.003L0.997 10.003L0.997 9.003ZM2.997 9.003L3.997 9.003L3.997 8.003L2.997 8.003L2.997 9.003ZM2.997 14.337L1.997 14.337L1.997 15.337L2.997 15.337L2.997 14.337ZM5.664 14.337L5.664 15.337L6.664 15.337L6.664 14.337L5.664 14.337ZM5.664 9.003L5.664 8.003L4.664 8.003L4.664 9.003L5.664 9.003ZM7.663 9.003L7.663 10.003L8.444 10.003L8.634 9.246L7.663 9.003ZM8.33 6.337L9.3 6.579L9.611 5.337L8.33 5.337L8.33 6.337ZM5.664 6.337L4.664 6.337L4.664 7.337L5.664 7.337L5.664 6.337ZM6.33 3.67L6.33 4.67L6.33 3.67ZM8.33 3.67L8.33 4.67L9.33 4.67L9.33 3.67L8.33 3.67ZM8.33 1.003L8.33 0.003L6.33 0.003L6.33 1.003L6.33 2.003L8.33 2.003L8.33 1.003ZM6.33 1.003L6.33 0.003C5.181 0.003 4.079 0.459 3.266 1.272L3.973 1.979L4.68 2.686C5.118 2.249 5.711 2.003 6.33 2.003L6.33 1.003ZM3.973 1.979L3.266 1.272C2.454 2.085 1.997 3.187 1.997 4.336L2.997 4.336L3.997 4.336C3.997 3.717 4.243 3.124 4.68 2.686L3.973 1.979ZM2.997 4.336L1.997 4.336L1.997 6.337L2.997 6.337L3.997 6.337L3.997 4.336L2.997 4.336ZM2.997 6.337L2.997 5.337L0.997 5.337L0.997 6.337L0.997 7.337L2.997 7.337L2.997 6.337ZM0.997 6.337L-0.003 6.337L-0.003 9.003L0.997 9.003L1.997 9.003L1.997 6.337L0.997 6.337ZM0.997 9.003L0.997 10.003L2.997 10.003L2.997 9.003L2.997 8.003L0.997 8.003L0.997 9.003ZM2.997 9.003L1.997 9.003L1.997 14.337L2.997 14.337L3.997 14.337L3.997 9.003L2.997 9.003ZM2.997 14.337L2.997 15.337L5.664 15.337L5.664 14.337L5.664 13.337L2.997 13.337L2.997 14.337ZM5.664 14.337L6.664 14.337L6.664 9.003L5.664 9.003L4.664 9.003L4.664 14.337L5.664 14.337ZM5.664 9.003L5.664 10.003L7.663 10.003L7.663 9.003L7.663 8.003L5.664 8.003L5.664 9.003ZM7.663 9.003L8.634 9.246L9.3 6.579L8.33 6.337L7.36 6.094L6.693 8.761L7.663 9.003ZM8.33 6.337L8.33 5.337L5.664 5.337L5.664 6.337L5.664 7.337L8.33 7.337L8.33 6.337ZM5.664 6.337L6.664 6.337L6.664 4.336L5.664 4.336L4.664 4.336L4.664 6.337L5.664 6.337ZM5.664 4.336L6.664 4.336C6.664 4.425 6.628 4.509 6.566 4.572L5.859 3.865L5.152 3.158C4.839 3.471 4.664 3.894 4.664 4.336L5.664 4.336ZM5.859 3.865L6.566 4.572C6.503 4.635 6.419 4.67 6.33 4.67L6.33 3.67L6.33 2.67C5.888 2.67 5.464 2.845 5.152 3.158L5.859 3.865ZM6.33 3.67L6.33 4.67L8.33 4.67L8.33 3.67L8.33 2.67L6.33 2.67L6.33 3.67ZM8.33 3.67L9.33 3.67L9.33 1.003L8.33 1.003L7.33 1.003L7.33 3.67L8.33 3.67Z",
+   "w": 9.61,
+   "h": 15.34
+  },
+  {
+   "i": 142,
+   "rect": [
+    1291.77,
+    3261.32,
+    1310.5,
+    3278.79
+   ],
+   "fill": "#ffffff",
+   "op": 1.0,
+   "eo": false,
+   "d": "M16.897 2.346L17.846 2.662L18.732 0.005L16.363 1.501L16.897 2.346ZM15.564 4.613L14.857 3.906L14.496 4.267L14.576 4.771L15.564 4.613ZM3.563 12.347L3.608 11.347L-0.002 11.183L3.01 13.18L3.563 12.347ZM7.563 11.013L8.222 11.766L9.583 10.575L7.85 10.055L7.563 11.013ZM4.23 3.013L4.993 2.367L4.049 1.251L3.351 2.535L4.23 3.013ZM10.23 5.68L10.259 6.679L11.459 6.644L11.208 5.47L10.23 5.68ZM14.897 3.146L14.215 3.877L14.503 4.146L14.897 4.146L14.897 3.146ZM16.897 2.346C15.949 2.03 15.949 2.03 15.949 2.03C15.949 2.03 15.949 2.029 15.949 2.029C15.949 2.029 15.949 2.029 15.949 2.029C15.949 2.028 15.949 2.028 15.949 2.028C15.949 2.028 15.949 2.028 15.949 2.028C15.949 2.029 15.948 2.031 15.947 2.034C15.945 2.041 15.941 2.052 15.935 2.068C15.924 2.099 15.906 2.148 15.881 2.211C15.831 2.336 15.756 2.513 15.658 2.714C15.454 3.13 15.178 3.585 14.857 3.906L15.564 4.613L16.271 5.32C16.817 4.774 17.207 4.096 17.453 3.595C17.579 3.338 17.676 3.111 17.74 2.946C17.773 2.864 17.798 2.796 17.816 2.748C17.825 2.724 17.831 2.704 17.836 2.69C17.839 2.682 17.841 2.677 17.843 2.672C17.843 2.67 17.844 2.668 17.845 2.666C17.845 2.665 17.845 2.665 17.845 2.664C17.845 2.664 17.845 2.663 17.846 2.663C17.846 2.663 17.846 2.663 17.846 2.663C17.846 2.662 17.846 2.662 16.897 2.346ZM15.564 4.613L14.576 4.771C15.508 10.596 9.108 14.822 4.115 11.513L3.563 12.347L3.01 13.18C9.485 17.472 17.753 11.964 16.551 4.455L15.564 4.613ZM3.563 12.347L3.517 13.346C5.214 13.423 6.941 12.886 8.222 11.766L7.563 11.013L6.905 10.261C6.052 11.007 4.845 11.404 3.608 11.347L3.563 12.347ZM7.563 11.013L7.85 10.055C5.113 9.234 3.751 5.988 5.108 3.49L4.23 3.013L3.351 2.535C1.375 6.171 3.346 10.792 7.276 11.971L7.563 11.013ZM4.23 3.013L3.466 3.659C5.131 5.627 7.691 6.755 10.259 6.679L10.23 5.68L10.201 4.68C8.235 4.738 6.261 3.866 4.993 2.367L4.23 3.013ZM10.23 5.68L11.208 5.47C11.008 4.538 11.431 3.872 12.05 3.55C12.691 3.216 13.544 3.252 14.215 3.877L14.897 3.146L15.579 2.415C14.249 1.174 12.469 1.076 11.126 1.776C9.762 2.487 8.852 4.021 9.252 5.889L10.23 5.68ZM14.897 3.146L14.897 4.146C15.24 4.146 15.576 4.057 15.839 3.969C16.116 3.875 16.385 3.755 16.612 3.644C16.841 3.532 17.043 3.42 17.187 3.338C17.259 3.296 17.318 3.261 17.36 3.235C17.381 3.223 17.397 3.213 17.409 3.205C17.415 3.201 17.42 3.198 17.424 3.196C17.426 3.195 17.427 3.194 17.428 3.193C17.429 3.193 17.43 3.193 17.43 3.192C17.43 3.192 17.43 3.192 17.431 3.192C17.431 3.192 17.431 3.192 17.431 3.192C17.431 3.192 17.431 3.192 16.897 2.346C16.363 1.501 16.363 1.501 16.363 1.501C16.363 1.501 16.364 1.5 16.364 1.5C16.364 1.5 16.364 1.5 16.364 1.5C16.364 1.5 16.364 1.5 16.364 1.5C16.364 1.5 16.364 1.5 16.363 1.501C16.362 1.502 16.36 1.503 16.356 1.505C16.349 1.509 16.338 1.516 16.323 1.525C16.292 1.544 16.246 1.571 16.189 1.605C16.072 1.672 15.911 1.761 15.732 1.848C15.551 1.937 15.366 2.017 15.199 2.074C15.018 2.135 14.921 2.146 14.897 2.146L14.897 3.146Z",
+   "w": 18.73,
+   "h": 17.47
+  }
+ ],
+ "images": [
+  {
+   "xref": 1520,
+   "bbox": [
+    120.019,
+    23.907,
+    190.279,
+    83.907
+   ],
+   "size": [
+    541,
+    462
+   ]
+  },
+  {
+   "xref": 1506,
+   "bbox": [
+    622.312,
+    156.445,
+    1437.641,
+    699.74
+   ],
+   "size": [
+    1536,
+    1024
+   ]
+  },
+  {
+   "xref": 1514,
+   "bbox": [
+    114.333,
+    1135.0,
+    504.333,
+    1395.0
+   ],
+   "size": [
+    1536,
+    1024
+   ]
+  },
+  {
+   "xref": 1500,
+   "bbox": [
+    525.0,
+    1135.0,
+    915.0,
+    1395.0
+   ],
+   "size": [
+    1536,
+    1024
+   ]
+  },
+  {
+   "xref": 1494,
+   "bbox": [
+    935.667,
+    1135.0,
+    1325.667,
+    1395.0
+   ],
+   "size": [
+    1536,
+    1024
+   ]
+  }
+ ]
+}

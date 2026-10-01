@@ -162,13 +162,23 @@ function mkArt(n, parent, pL) {
 }
 function mkImage(n) {
   const r = figma.createRectangle();
-  r.name = n.img === 'mascote' ? 'Mascote' : n.img === 'textura' ? 'Textura' : 'Imagem';
+  r.name = n.n || (n.img === 'mascote' ? 'Mascote' : n.img === 'textura' ? 'Textura' : 'Imagem');
   r.resize(n.w, n.h);
   const hash = (reg.imgs || {})[n.img];
   r.fills = hash ? [{ type: 'IMAGE', imageHash: hash, scaleMode: 'FILL' }] : [{ type: 'SOLID', color: { r: 0.9, g: 0.9, b: 0.9 } }];
   if (!hash) warn.push('img ' + n.img);
   setRadius(r, n.r);
   return r;
+}
+function applyLayout(f, L) {
+  const [m, g, p, pa, ca, wrap, cg] = L;
+  f.layoutMode = m === 'H' ? 'HORIZONTAL' : 'VERTICAL';
+  if (wrap) { f.layoutWrap = 'WRAP'; f.counterAxisSpacing = cg || 0; }
+  f.itemSpacing = g;
+  f.paddingTop = p[0]; f.paddingRight = p[1]; f.paddingBottom = p[2]; f.paddingLeft = p[3];
+  f.primaryAxisAlignItems = pa === 'SB' ? 'SPACE_BETWEEN' : pa;
+  f.counterAxisAlignItems = ca;
+  f.primaryAxisSizingMode = 'FIXED'; f.counterAxisSizingMode = 'FIXED';
 }
 let count = 0;
 function build(n, parent, pL) {
@@ -189,16 +199,7 @@ function build(n, parent, pL) {
   f.name = n.n || 'Frame';
   styleFrame(f, n);
   f.resize(Math.max(0.01, n.w), Math.max(0.01, n.h));
-  if (n.L) {
-    const [m, g, p, pa, ca, wrap, cg] = n.L;
-    f.layoutMode = m === 'H' ? 'HORIZONTAL' : 'VERTICAL';
-    if (wrap) { f.layoutWrap = 'WRAP'; f.counterAxisSpacing = cg || 0; }
-    f.itemSpacing = g;
-    f.paddingTop = p[0]; f.paddingRight = p[1]; f.paddingBottom = p[2]; f.paddingLeft = p[3];
-    f.primaryAxisAlignItems = pa === 'SB' ? 'SPACE_BETWEEN' : pa;
-    f.counterAxisAlignItems = ca;
-    f.primaryAxisSizingMode = 'FIXED'; f.counterAxisSizingMode = 'FIXED';
-  }
+  if (n.L) applyLayout(f, n.L);
   place(f, n, parent, pL);
   for (const c of n.c || []) build(c, f, n.L);
   if (n.L) {
@@ -242,6 +243,7 @@ function applyOverrides(inst, ovs) {
       else if (kind === 'z') node.resize(val[0], val[1]);
       else if (kind === 'p') { node.paddingTop = val[0]; node.paddingRight = val[1]; node.paddingBottom = val[2]; node.paddingLeft = val[3]; }
       else if (kind === 'i') recolorIcon(node, val, null, 1);
+      else if (kind === 'g') { const h = (reg.imgs || {})[val]; if (h) node.fills = [{ type: 'IMAGE', imageHash: h, scaleMode: 'FILL' }]; else warn.push('img ' + val); }
     } catch (e) { warn.push('ov ' + kind + ' ' + p.join('.') + ': ' + e.message); }
   }
 }
@@ -254,11 +256,13 @@ async function screen(spec, page, x, y, name) {
   const f = figma.createFrame();
   f.name = name || spec.n || 'Tela';
   f.resize(spec.w, spec.h);
-  f.fills = spec.f ? [solid(spec.f)] : [];
+  styleFrame(f, spec);
   f.clipsContent = true;
   page.appendChild(f);
   f.x = x; f.y = y;
-  for (const c of spec.c || []) build(c, f, null);
+  if (spec.L) applyLayout(f, spec.L);
+  for (const c of spec.c || []) build(c, f, spec.L || null);
+  if (spec.L && spec.hugM) f.primaryAxisSizingMode = 'AUTO';
   if (spec.nfix) f.numberOfFixedChildren = spec.nfix;
   await flushStyles();
   return f;

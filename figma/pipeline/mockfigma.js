@@ -123,7 +123,11 @@ class Scene extends Container {
       for (const a of r.actions) {
         if (a.type === 'NODE') {
           const d = nodes.get(a.destinationId);
-          if (!d || d.removed || d.type !== 'FRAME' || !['PAGE', 'SECTION'].includes(d.parent && d.parent.type)) err('destination must be a top-level frame');
+          const top = (n) => { while (n && n.parent && !['PAGE', 'SECTION'].includes(n.parent.type)) n = n.parent; return n; };
+          if (a.navigation === 'SCROLL_TO') {
+            if (!d || d.removed || top(d) !== top(this)) err('SCROLL_TO destination must be inside the same top-level frame');
+            if (a.transition && a.transition.type !== 'SCROLL_ANIMATE') err('SCROLL_TO transition');
+          } else if (!d || d.removed || d.type !== 'FRAME' || !['PAGE', 'SECTION'].includes(d.parent && d.parent.type)) err('destination must be a top-level frame');
           if (!['NAVIGATE', 'SWAP', 'OVERLAY', 'SCROLL_TO', 'CHANGE_TO'].includes(a.navigation)) err('navigation');
           if (a.transition && (!a.transition.easing || typeof a.transition.duration !== 'number')) err('transition');
         } else if (!['CLOSE', 'BACK'].includes(a.type)) err('bad action ' + a.type);
@@ -201,6 +205,7 @@ const page0 = new PageNode('Page 1'); page0.parent = root; root._children.push(p
 let current = page0;
 const figma = {
   root,
+  command: '',
   get currentPage() { return current; },
   set currentPage(v) { err('use setCurrentPageAsync'); },
   async setCurrentPageAsync(p) { if (!(p instanceof PageNode)) err('not a page'); current = p; },
@@ -241,7 +246,24 @@ const figma = {
     for (const c of list) s.appendChild(c);
     return s;
   },
-  createImage(bytes) { if (!(bytes instanceof Uint8Array) || bytes.length < 8) err('image bytes'); const hash = 'h' + bytes.length + '_' + bytes[20]; const img = { hash, async getSizeAsync() { return { width: 143, height: 244 }; } }; IMAGES.set(hash, img); return img; },
+  createImage(bytes) {
+    if (!(bytes instanceof Uint8Array) || bytes.length < 8) err('image bytes');
+    const b = Buffer.from(bytes);
+    let size = null;
+    if (b.readUInt32BE(0) === 0x89504e47) size = { width: b.readUInt32BE(16), height: b.readUInt32BE(20) };
+    else if (b[0] === 0xff && b[1] === 0xd8) {
+      for (let i = 2; i < b.length - 9;) {
+        if (b[i] !== 0xff) err('bad jpeg');
+        const m = b[i + 1], len = b.readUInt16BE(i + 2);
+        if (m >= 0xc0 && m <= 0xc3) { size = { width: b.readUInt16BE(i + 7), height: b.readUInt16BE(i + 5) }; break; }
+        i += 2 + len;
+      }
+    }
+    if (!size) err('unsupported image format');
+    const hash = 'h' + bytes.length + '_' + bytes[bytes.length >> 1];
+    const img = { hash, async getSizeAsync() { return size; } };
+    IMAGES.set(hash, img); return img;
+  },
   getImageByHash(h) { return IMAGES.get(h) || null; },
   base64Decode(s) { return new Uint8Array(Buffer.from(s, 'base64')); },
   async loadFontAsync(f) { if (!AVAILABLE_FONTS.has(fk(f))) err('font unavailable ' + fk(f)); loadedFonts.add(fk(f)); },

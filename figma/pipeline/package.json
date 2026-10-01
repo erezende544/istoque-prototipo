@@ -1,19 +1,22 @@
 {
   "name": "istoque-figma-pipeline",
   "private": true,
-  "description": "Gera o plugin do Figma que desenha o protótipo IS.TOQUE a partir do index.html",
+  "description": "Gera o plugin do Figma que desenha o protótipo IS.TOQUE a partir do index.html e dos PDFs da landing page",
   "scripts": {
     "prepare-assets": "node prepare_assets.js",
     "extract": "node run_extract.js",
     "convert": "node convert.js",
     "components": "node components.js",
+    "site": "node site/site_spec.js .",
     "logo": "python3 make_logo.py",
     "plugin": "node gen_plugin.js ../plugin",
     "test:mock": "node runmock.js ../plugin/code.js",
     "test:visual": "node render.js",
-    "build": "npm run prepare-assets && npm run extract && npm run convert && npm run components && npm run logo && npm run plugin && npm run test:mock"
+    "build": "npm run prepare-assets && npm run extract && npm run convert && npm run components && npm run site && npm run logo && npm run plugin && npm run test:mock"
   },
   "devDependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/poppins": "^5.3.0",
     "playwright": "^1.47.0",
     "pngjs": "^7.0.0"
   }
