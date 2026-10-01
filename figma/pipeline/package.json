@@ -1,0 +1,19 @@
+{
+  "name": "istoque-figma-pipeline",
+  "private": true,
+  "description": "Gera o plugin do Figma que desenha o protótipo IS.TOQUE a partir do index.html",
+  "scripts": {
+    "prepare-assets": "node prepare_assets.js",
+    "extract": "node run_extract.js",
+    "convert": "node convert.js",
+    "components": "node components.js",
+    "plugin": "node gen_plugin.js ../plugin",
+    "test:mock": "node runmock.js ../plugin/code.js",
+    "test:visual": "node render.js",
+    "build": "npm run prepare-assets && npm run extract && npm run convert && npm run components && npm run plugin && npm run test:mock"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0",
+    "pngjs": "^7.0.0"
+  }
+}

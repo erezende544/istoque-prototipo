@@ -1,0 +1,11 @@
+node_modules/
+app.js
+font*.ttf
+data/
+ref/
+fig/
+fig2/
+rshots/
+rdiff/
+render_report.json
+*.log
