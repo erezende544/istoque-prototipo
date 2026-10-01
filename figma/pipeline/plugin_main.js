@@ -434,6 +434,96 @@ async function buildFoundations(ds) {
   await L.flushStyles();
 }
 
+// ---------------------------------------------------------------- logo
+// Builds the "Logo" section (vector logo components + presentation tiles) on a page.
+// Shared by the MCP call and the Figma plugin. Expects LOGOS = [{title, desc, svg, bg, origin}].
+async function buildLogoSection(page, LOGOS, x, y) {
+  const NSL = 'istoque';
+  await Promise.all([['Inter', 'Regular'], ['Inter', 'Semi Bold'], ['Poppins', 'SemiBold']].map(([family, style]) => figma.loadFontAsync({ family, style })));
+  const vars = await figma.variables.getLocalVariablesAsync('COLOR');
+  const hex = (c) => '#' + [c.r, c.g, c.b].map((v) => Math.round(v * 255).toString(16).padStart(2, '0')).join('');
+  const byHex = {};
+  for (const v of vars) { const val = Object.values(v.valuesByMode)[0]; if (val && typeof val === 'object' && 'r' in val && !byHex[hex(val)]) byHex[hex(val)] = v; }
+  const rgb = (h) => ({ r: parseInt(h.slice(1, 3), 16) / 255, g: parseInt(h.slice(3, 5), 16) / 255, b: parseInt(h.slice(5, 7), 16) / 255 });
+  const paint = (h) => { h = h.toLowerCase(); let p = { type: 'SOLID', color: rgb(h) }; if (byHex[h]) { try { p = figma.variables.setBoundVariableForPaint(p, 'color', byHex[h]); } catch (e) {} } return p; };
+  const text = (s, family, style, size, color, lh, w) => {
+    const t = figma.createText();
+    t.fontName = { family, style };
+    t.characters = s;
+    t.fontSize = size;
+    t.lineHeight = { value: lh, unit: 'PIXELS' };
+    t.fills = [paint(color)];
+    if (w) { t.textAutoResize = 'HEIGHT'; t.resize(w, t.height); }
+    return t;
+  };
+  let sec = page.children.find((n) => n.type === 'SECTION' && n.getSharedPluginData(NSL, 'logo') === '1');
+  if (sec) return { section: sec.id, existing: true };
+  sec = figma.createSection();
+  sec.name = 'Logo';
+  sec.setSharedPluginData(NSL, 'logo', '1');
+  page.appendChild(sec);
+  sec.x = x; sec.y = y;
+  const wrap = figma.createFrame();
+  wrap.name = 'Logo · variações';
+  wrap.layoutMode = 'VERTICAL'; wrap.itemSpacing = 28;
+  wrap.paddingTop = wrap.paddingBottom = wrap.paddingLeft = wrap.paddingRight = 0;
+  wrap.primaryAxisSizingMode = 'AUTO'; wrap.counterAxisSizingMode = 'AUTO';
+  wrap.fills = [];
+  sec.appendChild(wrap);
+  wrap.x = 60; wrap.y = 80;
+  wrap.appendChild(text('Logo', 'Poppins', 'SemiBold', 30, '#1f1813', 40));
+  wrap.appendChild(text('Vetorizada a partir do index.html: letras convertidas em contornos (Poppins Bold) e símbolo com o traço convertido em forma. Cores ligadas às variáveis.', 'Inter', 'Regular', 14, '#746d67', 22, 620));
+  const grid = figma.createFrame();
+  grid.name = 'Variações';
+  grid.layoutMode = 'HORIZONTAL'; grid.layoutWrap = 'WRAP'; grid.itemSpacing = 24; grid.counterAxisSpacing = 24;
+  grid.primaryAxisSizingMode = 'FIXED'; grid.fills = [];
+  wrap.appendChild(grid);
+  grid.resize(624, 100);
+  grid.counterAxisSizingMode = 'AUTO';
+  const comps = [];
+  for (const L of LOGOS) {
+    const tile = figma.createFrame();
+    tile.name = L.title;
+    tile.layoutMode = 'VERTICAL'; tile.itemSpacing = 18;
+    tile.paddingTop = tile.paddingBottom = 28; tile.paddingLeft = tile.paddingRight = 28;
+    tile.primaryAxisSizingMode = 'AUTO'; tile.counterAxisSizingMode = 'FIXED';
+    tile.cornerRadius = 16;
+    tile.fills = [paint(L.bg)];
+    if (L.bg.toLowerCase() !== '#164d4e') { tile.strokes = [paint('#e8e1d6')]; tile.strokeWeight = 1; }
+    grid.appendChild(tile);
+    tile.resize(300, 100);
+    tile.primaryAxisSizingMode = 'AUTO';
+    const art = figma.createFrame();
+    art.name = 'Área';
+    art.fills = []; art.layoutMode = 'HORIZONTAL'; art.primaryAxisAlignItems = 'MIN'; art.counterAxisAlignItems = 'CENTER';
+    art.primaryAxisSizingMode = 'FIXED'; art.counterAxisSizingMode = 'FIXED';
+    tile.appendChild(art);
+    art.resize(244, 56);
+    const node = figma.createNodeFromSvg(L.svg.trim());
+    node.fills = [];
+    const vecs = node.findAll((n) => n.type === 'VECTOR');
+    const names = vecs.length === 3 ? ['Símbolo', 'ISTOQUE', 'Ponto'] : ['Símbolo'];
+    vecs.forEach((v, i) => {
+      v.name = names[i] || 'Vetor';
+      const f = v.fills && v.fills[0];
+      if (f && f.type === 'SOLID') v.fills = [paint(hex(f.color))];
+      v.constraints = { horizontal: 'SCALE', vertical: 'SCALE' };
+    });
+    for (const g of node.findAll((n) => n.type === 'GROUP' || n.type === 'FRAME')) if ('constraints' in g) g.constraints = { horizontal: 'SCALE', vertical: 'SCALE' };
+    const comp = figma.createComponentFromNode(node);
+    comp.name = 'Logo/' + L.title.replace(/^Logo · /, '');
+    comp.description = L.desc + (L.origin === 'derivada' ? '' : ' Extraída do protótipo em HTML.');
+    comp.setSharedPluginData(NSL, 'logo', L.file || L.title);
+    art.appendChild(comp);
+    const light = L.bg.toLowerCase() === '#164d4e';
+    tile.appendChild(text(L.title + (L.origin === 'derivada' ? ' (derivada)' : ''), 'Inter', 'Semi Bold', 13, light ? '#ffffff' : '#1f1813', 18));
+    tile.appendChild(text(L.desc, 'Inter', 'Regular', 11, light ? '#c2d7d2' : '#746d67', 16, 244));
+    comps.push(comp);
+  }
+  sec.resizeWithoutConstraints(wrap.width + 120, wrap.height + 160);
+  return { section: sec.id, comps: comps.map((c) => c.id + ' ' + c.name + ' ' + Math.round(c.width) + 'x' + Math.round(c.height)) };
+}
+
 // ---------------------------------------------------------------- principal
 async function main() {
   await progress('preparando páginas e fontes…');
@@ -449,6 +539,7 @@ async function main() {
   await progress('capa e fundamentos…');
   try { await buildCover(ds); } catch (e) { fail('capa', e); }
   try { await buildFoundations(ds); } catch (e) { fail('fundamentos', e); }
+  try { await buildLogoSection(ds, DATA.logos, 1540, 0); } catch (e) { fail('logo', e); }
   const frames = await buildScreens([ds, desk, mob]);
   await progress('ligando interações do protótipo…');
   await wire(frames, [ds, desk, mob]);

@@ -52,6 +52,7 @@ ICONS.calendario = 'M4 5h16v16H4Z M4 10h16 M8 3v4 M16 3v4';
 const ART_NAMES = { b4028342: 'Pote', d02bfb1c: 'Tomate', '08d172a2': 'Folhas', c31c1a10: 'Carne', '1d238d7f': 'Hambúrguer', '181c2a26': 'Pão', d6780489: 'Queijo', f976bf48: 'Garrafa', '1868f46b': 'Ovos', f92aba49: 'Bowl' };
 const ARTS = {};
 for (const [h, inner] of Object.entries(JSON.parse(rd('arts.json')))) ARTS[ART_NAMES[h]] = inner;
+const LOGOS = JSON.parse(rd('logo_variants.json')).map((l) => ({ title: l.title, desc: l.desc, svg: l.svg, bg: l.bg, origin: l.origin, file: l.file }));
 const IMAGES = { mascote: fs.readFileSync(path.join(DIR, 'mascot_pal.png')).toString('base64'), textura: fs.readFileSync(path.join(DIR, 'texture_2bit.png')).toString('base64') };
 
 // ---------- components ----------
@@ -152,7 +153,7 @@ const nDesk = SECTIONS.filter((s) => s.page === 1).reduce((a, s) => a + s.keys.l
 const nMob = SECTIONS.filter((s) => s.page === 2).reduce((a, s) => a + s.keys.length, 0);
 const DATA = {
   pages: ['01 · Capa e Design System', '02 · Telas Desktop e Modais', '03 · Telas Mobile'],
-  colors: COLORS, styles: STYLES, icons: ICONS, arts: ARTS, images: IMAGES,
+  colors: COLORS, styles: STYLES, icons: ICONS, arts: ARTS, images: IMAGES, logos: LOGOS,
   components: COMPONENTS, groupOrder: GROUP_ORDER, groupInfo: GROUP_INFO,
   screens: SCREENS, overlays: OVERLAYS, names: NAMES_FULL, sections: SECTIONS, links: LINKS, flows: FLOWS,
   coverMeta: ['Projeto acadêmico · PUC Minas', 'Fonte: protótipo navegável em React (index.html)', `${nDesk} telas e estados desktop · ${nMob} telas mobile · ${COMPONENTS.length} variantes de componentes`],

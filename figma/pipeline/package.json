@@ -7,10 +7,11 @@
     "extract": "node run_extract.js",
     "convert": "node convert.js",
     "components": "node components.js",
+    "logo": "python3 make_logo.py",
     "plugin": "node gen_plugin.js ../plugin",
     "test:mock": "node runmock.js ../plugin/code.js",
     "test:visual": "node render.js",
-    "build": "npm run prepare-assets && npm run extract && npm run convert && npm run components && npm run plugin && npm run test:mock"
+    "build": "npm run prepare-assets && npm run extract && npm run convert && npm run components && npm run logo && npm run plugin && npm run test:mock"
   },
   "devDependencies": {
     "playwright": "^1.47.0",

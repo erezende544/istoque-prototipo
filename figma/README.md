@@ -13,7 +13,7 @@ A integração com o Figma (MCP) já criou no arquivo:
 - 27 ícones, 10 ilustrações e 2 imagens (mascote e textura) como componentes;
 - os primeiros componentes da biblioteca: Topbar, Avatar, Botão de ícone e Botão.
 
-O plano Starter com assento View permite **20 chamadas ao MCP por mês**, e essa cota acabou durante a criação dos componentes. O restante (biblioteca completa, 47 telas e interações) está empacotado num **plugin de desenvolvimento** que faz o mesmo trabalho dentro do próprio Figma, sem esse limite:
+O plano Starter com assento View permite **20 chamadas ao MCP por mês**, e essa cota acabou durante a criação dos componentes. O restante (biblioteca completa, logo vetorizada, 47 telas e interações) está empacotado num **plugin de desenvolvimento** que faz o mesmo trabalho dentro do próprio Figma, sem esse limite:
 
 1. Abra o **Figma para desktop**, já que plugins em desenvolvimento só rodam no app.
 2. Abra o arquivo acima. Também funciona num arquivo em branco: o plugin cria tudo do zero.
@@ -32,6 +32,7 @@ O plugin aproveita o que já existe no arquivo (variáveis, estilos, ícones e c
 
 ### 01 · Capa e Design System
 - **Capa** com índice das páginas.
+- **Logo**: seção ao lado da capa com a logo vetorizada e as variações (detalhes em [Logo](#logo)).
 - **Fundamentos**: paleta (amostras ligadas às variáveis) e tipografia (um exemplo por estilo de texto).
 - **Ícones** (27), **Ilustrações** (10) e **Imagens** (2).
 - **Componentes**: 147 variantes em 25 conjuntos, cada um com descrição e propriedades (Estilo, Tom, Estado, Tipo, Tamanho, Plataforma…).
@@ -71,6 +72,19 @@ O plugin liga **422 interações**:
 
 As telas mais altas que a janela rolam na apresentação, e a sidebar fica fixa.
 
+## Logo
+
+A logo do app (símbolo de caixa + “ISTOQUE.”) foi vetorizada a partir do próprio `index.html`. As letras são os contornos reais da fonte Poppins Bold embutida no HTML, posicionadas com o mesmo tamanho, espaçamento entre letras (1 px) e linha de base da sidebar. O traço do símbolo virou forma preenchida, então a logo escala sem depender de fonte nem de espessura de traço.
+
+Os arquivos SVG estão em [`figma/logo/`](logo). No Figma, cada versão vira um componente (`Logo/…`) com as cores ligadas às variáveis, na seção **Logo** ao lado da capa.
+
+| Arquivo | Versão | Origem |
+|---|---|---|
+| `istoque-logo-desktop.svg` | Logo da sidebar desktop: símbolo de 29 px e texto de 25 px, para fundos escuros | HTML |
+| `istoque-logo-mobile.svg` | Logo do menu lateral mobile: o mesmo símbolo de 29 px com texto de 22 px | HTML |
+| `istoque-simbolo.svg` | Só o símbolo, em âmbar | HTML |
+| `istoque-logo-fundo-claro.svg` | Símbolo e texto em teal, ponto em âmbar, para fundos claros | Derivada (não existe no HTML) |
+
 ## Fidelidade
 
 Cada tela foi validada antes de virar plugin. A mesma especificação que o plugin desenha no Figma foi renderizada com uma emulação do auto layout do Figma e comparada, pixel a pixel, com capturas do `index.html` original (`pipeline/render.js`):
@@ -101,12 +115,14 @@ No próprio Figma, os quatro primeiros componentes foram montados com a mesma bi
 | 3 | `convert.js` | transforma a árvore do DOM em especificação Figma: decide o auto layout simulando o algoritmo do Figma e confere cada posição |
 | 4 | `components.js` | detecta padrões repetidos e cria componentes, variantes e overrides (texto, ícone, cor, tamanho) |
 | 5 | `links.js` | define as interações do protótipo a partir dos textos e componentes de cada tela |
+| 5b | `make_logo.py` | vetoriza a logo (contornos da Poppins Bold, traço do símbolo convertido em forma) e grava os SVGs em `figma/logo/` |
 | 6 | `gen_plugin.js` | junta dados, construtor (`lib.js`) e execução (`plugin_main.js`) em `plugin/code.js` |
 | 7 | `runmock.js`, `render.js` | teste com a API simulada e validação visual |
 
 ```bash
 cd figma/pipeline
 npm install          # playwright e pngjs
+pip install fonttools skia-pathops   # usados por make_logo.py
 npm run build        # etapas 1 a 6 + teste com a API simulada
 npm run test:visual  # opcional: compara as telas com o index.html
 ```
